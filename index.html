@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Intrepidux S.R.L. — Software de gestión empresarial moderno, ágil e integrado. Soluciones ERP para la transformación digital.">
   <title>Intrepidux | Soluciones ERP</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0f1419;
-      --surface: #1a2332;
-      --surface-alt: #243044;
-      --accent: #3b82f6;
-      --accent-hover: #2563eb;
-      --text: #f1f5f9;
-      --muted: #94a3b8;
-      --border: #2d3a4f;
+      --primary: #F3572C;
+      --primary-dark: #c7340b;
+      --secondary: #9B0808;
+      --bg: #FFFFFF;
+      --bg-alt: #F6F6F6;
+      --footer: #383E45;
+      --text: #212529;
+      --muted: #6C757D;
+      --border: #DEE2E6;
     }
 
     * {
@@ -24,130 +29,165 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: "Roboto", sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
 
     a {
-      color: var(--accent);
+      color: var(--primary);
       text-decoration: none;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: var(--primary-dark);
     }
 
     .container {
       width: 100%;
-      max-width: 1100px;
+      max-width: 1140px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
+    /* Header */
     header {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-      background: rgba(15, 20, 25, 0.9);
+      background: var(--bg);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
       position: sticky;
       top: 0;
       z-index: 10;
-      backdrop-filter: blur(8px);
     }
 
-    .header-inner {
+    .header-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
     }
 
-    .logo {
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+    .header-phone {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .header-phone a {
       color: var(--text);
+      font-weight: 500;
     }
 
-    .logo span {
-      color: var(--accent);
+    .header-logo {
+      text-align: center;
+      padding: 16px 0;
+    }
+
+    .header-logo img {
+      height: 72px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 0 16px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
     }
 
     nav a {
-      color: var(--muted);
+      color: var(--text);
       font-size: 0.95rem;
-      margin-left: 24px;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: 4px;
+      transition: color 0.2s;
     }
 
     nav a:hover {
-      color: var(--text);
+      color: var(--primary);
       text-decoration: none;
-    }
-
-    .hero {
-      padding: 80px 0 64px;
-      text-align: center;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 700;
-      line-height: 1.2;
-      max-width: 720px;
-      margin: 0 auto 20px;
-      letter-spacing: -0.03em;
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      color: var(--muted);
-      max-width: 600px;
-      margin: 0 auto 36px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 28px;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 8px;
-      font-weight: 600;
+      padding: 12px 28px;
+      background: var(--primary);
+      color: #fff !important;
+      border-radius: 4px;
+      font-weight: 500;
       font-size: 1rem;
+      border: none;
       transition: background 0.2s;
     }
 
     .btn:hover {
-      background: var(--accent-hover);
+      background: var(--primary-dark);
       text-decoration: none;
     }
 
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, rgba(243, 87, 44, 0.92) 0%, rgba(155, 8, 8, 0.88) 100%),
+                  url('https://www.intrepidux.com/web/image/1880-0ff00302/3d-futuristic-background-with-low-poly-plexus-design.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 90px 24px 80px;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.25;
+      max-width: 780px;
+      margin: 0 auto 20px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      font-weight: 300;
+      max-width: 640px;
+      margin: 0 auto 36px;
+      opacity: 0.95;
+      line-height: 1.7;
+    }
+
+    .hero .btn {
+      background: #fff;
+      color: var(--primary) !important;
+      font-weight: 600;
+    }
+
+    .hero .btn:hover {
+      background: var(--bg-alt);
+    }
+
+    /* Sections */
     section {
-      padding: 64px 0;
+      padding: 72px 0;
     }
 
     section h2 {
-      font-size: 1.75rem;
+      font-size: 1.85rem;
+      font-weight: 700;
       text-align: center;
       margin-bottom: 12px;
+      color: var(--text);
     }
 
     .section-sub {
       text-align: center;
       color: var(--muted);
-      max-width: 560px;
+      max-width: 580px;
       margin: 0 auto 48px;
+      font-size: 1.05rem;
+    }
+
+    /* Process */
+    #proceso {
+      background: var(--bg-alt);
     }
 
     .process-grid {
@@ -157,29 +197,37 @@
     }
 
     .process-card {
-      background: var(--surface);
+      background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 28px 24px;
+      border-radius: 8px;
+      padding: 32px 24px;
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+
+    .process-card:hover {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
     }
 
     .process-card .step {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: var(--accent);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
       color: #fff;
       font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 16px;
+      font-size: 1.1rem;
+      margin-bottom: 18px;
     }
 
     .process-card h3 {
       font-size: 1.1rem;
-      margin-bottom: 8px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--primary);
     }
 
     .process-card p {
@@ -187,41 +235,44 @@
       font-size: 0.95rem;
     }
 
+    /* Services */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
     }
 
     .service-item {
-      background: var(--surface-alt);
+      background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 24px 20px;
+      border-top: 3px solid var(--primary);
+      border-radius: 8px;
+      padding: 28px 16px;
       text-align: center;
-      font-weight: 600;
-      font-size: 0.95rem;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
 
+    .service-item:hover {
+      border-top-color: var(--secondary);
+      box-shadow: 0 4px 16px rgba(243, 87, 44, 0.12);
+    }
+
+    /* CTA */
     .cta {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      background: var(--bg-alt);
       text-align: center;
-    }
-
-    .cta h2 {
-      margin-bottom: 16px;
     }
 
     .contact-list {
       list-style: none;
-      margin-top: 24px;
+      margin-top: 28px;
     }
 
     .contact-list li {
       color: var(--muted);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       font-size: 1.05rem;
     }
 
@@ -229,24 +280,49 @@
       color: var(--text);
     }
 
+    /* Footer */
     footer {
-      padding: 32px 0;
+      background: var(--footer);
+      color: rgba(255, 255, 255, 0.85);
+      padding: 40px 0 28px;
       text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
-      nav {
+    footer img {
+      height: 56px;
+      margin-bottom: 16px;
+      filter: brightness(1.1);
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    footer a {
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .header-top {
+        justify-content: center;
+      }
+
+      .header-top .spacer {
         display: none;
       }
 
+      nav a {
+        padding: 6px 12px;
+        font-size: 0.88rem;
+      }
+
       .hero {
-        padding: 48px 0 40px;
+        padding: 60px 20px 56px;
       }
 
       section {
-        padding: 48px 0;
+        padding: 52px 0;
       }
     }
   </style>
@@ -254,13 +330,23 @@
 <body>
 
   <header>
-    <div class="container header-inner">
-      <div class="logo">Intrepid<span>ux</span></div>
+    <div class="container">
+      <div class="header-top">
+        <div class="spacer" style="width:140px"></div>
+        <div class="header-phone">
+          <a href="tel:+18296101505">+1 (829) 610-1505</a>
+        </div>
+      </div>
+      <div class="header-logo">
+        <a href="/">
+          <img src="assets/logo.png" alt="Intrepidux">
+        </a>
+      </div>
       <nav>
+        <a href="#proceso">Cómo trabajamos</a>
         <a href="#servicios">Servicios</a>
-        <a href="#proceso">Proceso</a>
         <a href="#contacto">Contacto</a>
-        <a href="https://intrepidux.com" target="_blank" rel="noopener">intrepidux.com</a>
+        <a href="https://www.intrepidux.com" target="_blank" rel="noopener">intrepidux.com</a>
       </nav>
     </div>
   </header>
@@ -268,13 +354,12 @@
   <main>
     <section class="hero">
       <div class="container">
-        <div class="hero-badge">Intrepidux S.R.L. · Soluciones ERP</div>
         <h1>Software de gestión empresarial moderno, ágil e integrado</h1>
         <p>
-          Desarrollamos e implementamos sistemas que satisfacen las necesidades
-          de las empresas en la era de la transformación digital.
+          Soluciones ERP que satisfacen todas las necesidades de las empresas
+          en la era de la transformación digital.
         </p>
-        <a class="btn" href="#contacto">Solicitar información</a>
+        <a class="btn" href="#contacto">Contáctenos</a>
       </div>
     </section>
 
@@ -282,7 +367,7 @@
       <div class="container">
         <h2>Cómo trabajamos</h2>
         <p class="section-sub">
-          Un proceso claro desde el primer contacto hasta el soporte continuo.
+          Un proceso claro desde la interacción inicial hasta el soporte continuo.
         </p>
         <div class="process-grid">
           <article class="process-card">
@@ -316,11 +401,11 @@
           Módulos integrados que cubren las áreas clave de su gestión empresarial.
         </p>
         <div class="services-grid">
-          <div class="service-item">Contabilidad</div>
-          <div class="service-item">Ventas</div>
-          <div class="service-item">Inventario</div>
-          <div class="service-item">Recursos Humanos</div>
-          <div class="service-item">Página web</div>
+          <div class="service-item"><span class="service-icon">📊</span>Contabilidad</div>
+          <div class="service-item"><span class="service-icon">🛒</span>Ventas</div>
+          <div class="service-item"><span class="service-icon">📦</span>Inventario</div>
+          <div class="service-item"><span class="service-icon">👥</span>Recursos Humanos</div>
+          <div class="service-item"><span class="service-icon">🌐</span>Página web</div>
         </div>
       </div>
     </section>
@@ -331,10 +416,11 @@
         <p class="section-sub">
           Cuéntenos sobre su proyecto y le ayudamos a encontrar la solución adecuada.
         </p>
+        <a class="btn" href="https://www.intrepidux.com/contactus" target="_blank" rel="noopener">Solicitar información</a>
         <ul class="contact-list">
           <li><strong>Email:</strong> <a href="mailto:proyecto@intrepidux.com">proyecto@intrepidux.com</a></li>
           <li><strong>Teléfono:</strong> <a href="tel:+18296101505">+1 (829) 610-1505</a></li>
-          <li><strong>Web:</strong> <a href="https://intrepidux.com" target="_blank" rel="noopener">intrepidux.com</a></li>
+          <li><strong>Web:</strong> <a href="https://www.intrepidux.com" target="_blank" rel="noopener">www.intrepidux.com</a></li>
         </ul>
       </div>
     </section>
@@ -342,7 +428,8 @@
 
   <footer>
     <div class="container">
-      &copy; Intrepidux S.R.L. — Soluciones ERP
+      <img src="assets/logo.png" alt="Intrepidux">
+      <p>&copy; Intrepidux S.R.L. — Soluciones ERP</p>
     </div>
   </footer>
 
