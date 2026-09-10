@@ -1,151 +1,350 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-       <head>
-           
-             <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="DietaMaker">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
-    
-    
-    <link href="style/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Intrepidux S.R.L. — Software de gestión empresarial moderno, ágil e integrado. Soluciones ERP para la transformación digital.">
+  <title>Intrepidux | Soluciones ERP</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --surface-alt: #243044;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #2d3a4f;
+    }
 
-      
-    <title>Resume</title>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <!-- Bootstrap core CSS -->
-    <link href="style/assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
- <!-- Custom styles for this template -->
-    <link href="style/assets/css/main.css" rel="stylesheet" type="text/css"/>
-    
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-          <!-- ... Ember.js and other javascript dependencies ... -->
+    a:hover {
+      text-decoration: underline;
+    }
 
-        <script src="js/libs/jquery/jquery.min.js" type="text/javascript"></script>
-        <script src="js/libs/handlebars.js/handlebars.min.js" type="text/javascript"></script>
-        <script src="js/libs/ember.js/ember-template-compiler.js" type="text/javascript"></script>
-        <script src="js/libs/ember.js/ember.min.js" type="text/javascript"></script>
-        <script src="js/libs/emberdata.js/ember-data-latest.min.js" type="text/javascript"></script>
-             
-        
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-    
-<body >
-    
-<script type="text/x-handlebars" >
-  <div class="container">
-          <div class="header clearfix">
-            <nav>
-              <ul class="nav nav-pills pull-right">
-                <li role="presentation" class="active">{{#link-to "index" }}Home{{/link-to}}</li>
-                
-            <li role="presentation">{{#link-to "FoodBank" }}About{{/link-to}}</li>
-                <li role="presentation">{{#link-to "Contact" }}Contact{{/link-to}}</li>
-                <li role="presentation">{{#link-to "SignIn" }}Sign in{{/link-to}}</li>
-              </ul>
-            </nav>
-              <img src="style/assets/img/DIETAMAKER.png" alt="" height = "180"/>
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      background: rgba(15, 20, 25, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
 
-          </div>
-        {{outlet}}
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
 
-        </div>{{!  end container }}
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
 
-        <footer class="footer">
-            <p>&copy; Company 2014</p>
-        </footer>
+    .logo span {
+      color: var(--accent);
+    }
 
+    nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-left: 24px;
+    }
 
+    nav a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
 
-		
- </script>
- 
- <script type="text/x-handlebars" data-template-name="index" >
-               <div class="jumbotron">
-            <h1>Jumbotron heading</h1>
-            <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-          </div>
+    .hero {
+      padding: 80px 0 64px;
+      text-align: center;
+    }
 
-          <div class="row marketing">
-            <div class="col-xs-6 col-lg-3">
-        
-                <p> <div class = "img1"/>  Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-                <p> <div class = "img1"/>  Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-                <p> <div class = "img1"/>  Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-            </div>
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+    }
 
-            <div class="col-xs-6 col-lg-3">
-        
-                <p> <div class = "img1"/>  Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-                <p> <div class = "img1"/>  Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-                <p> <div class = "img1"/>  Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-            </div>
-         </div>
-         
-            
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 720px;
+      margin: 0 auto 20px;
+      letter-spacing: -0.03em;
+    }
 
-         
- </script>
- 
-  
-  
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
 
-  
-  
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
 
+    .btn:hover {
+      background: var(--accent-hover);
+      text-decoration: none;
+    }
 
+    section {
+      padding: 64px 0;
+    }
 
+    section h2 {
+      font-size: 1.75rem;
+      text-align: center;
+      margin-bottom: 12px;
+    }
 
+    .section-sub {
+      text-align: center;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 48px;
+    }
 
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
 
-                                      
-                                      
- 
- 
- 
-    
-    
-                <!-- Bootstrap core JavaScript
-         ================================================== -->
-        
-    
-        
-         <!-- Placed at the end of the document so the pages load faster -->
-         
-         
-         <script src="style/assets/js/bootstrap.min.js" type="text/javascript"></script>
-         
-         <script src="style/assets/js/main.js" type="text/javascript"></script>
+    .process-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 24px;
+    }
 
+    .process-card .step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
 
-       
-        
-        
-        <script src="app.js" type="text/javascript"></script>
-        <script src="routes/router.js" type="text/javascript"></script>
-        <!--<script src="views/menu_view.js" type="text/javascript"></script>-->
+    .process-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
 
-            
-      
+    .process-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .service-item {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 20px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 16px;
+    }
+
+    .contact-list {
+      list-style: none;
+      margin-top: 24px;
+    }
+
+    .contact-list li {
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .contact-list strong {
+      color: var(--text);
+    }
+
+    footer {
+      padding: 32px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 48px 0 40px;
+      }
+
+      section {
+        padding: 48px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Intrepid<span>ux</span></div>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://intrepidux.com" target="_blank" rel="noopener">intrepidux.com</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">Intrepidux S.R.L. · Soluciones ERP</div>
+        <h1>Software de gestión empresarial moderno, ágil e integrado</h1>
+        <p>
+          Desarrollamos e implementamos sistemas que satisfacen las necesidades
+          de las empresas en la era de la transformación digital.
+        </p>
+        <a class="btn" href="#contacto">Solicitar información</a>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <div class="container">
+        <h2>Cómo trabajamos</h2>
+        <p class="section-sub">
+          Un proceso claro desde el primer contacto hasta el soporte continuo.
+        </p>
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="step">1</div>
+            <h3>Entendiendo tus necesidades</h3>
+            <p>Interacción inicial con el cliente para comprender objetivos, procesos y retos del negocio.</p>
+          </article>
+          <article class="process-card">
+            <div class="step">2</div>
+            <h3>Elaboración de la solución</h3>
+            <p>La información recopilada se traduce en un plan de acción concreto y personalizado.</p>
+          </article>
+          <article class="process-card">
+            <div class="step">3</div>
+            <h3>Construyendo su éxito</h3>
+            <p>Desarrollo, configuración e implementación del sistema adaptado a su operación.</p>
+          </article>
+          <article class="process-card">
+            <div class="step">4</div>
+            <h3>Creciendo contigo</h3>
+            <p>Soporte y mantenimiento continuo para que el sistema evolucione con su empresa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <h2>Nuestros servicios</h2>
+        <p class="section-sub">
+          Módulos integrados que cubren las áreas clave de su gestión empresarial.
+        </p>
+        <div class="services-grid">
+          <div class="service-item">Contabilidad</div>
+          <div class="service-item">Ventas</div>
+          <div class="service-item">Inventario</div>
+          <div class="service-item">Recursos Humanos</div>
+          <div class="service-item">Página web</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="cta">
+      <div class="container">
+        <h2>Contáctenos</h2>
+        <p class="section-sub">
+          Cuéntenos sobre su proyecto y le ayudamos a encontrar la solución adecuada.
+        </p>
+        <ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:proyecto@intrepidux.com">proyecto@intrepidux.com</a></li>
+          <li><strong>Teléfono:</strong> <a href="tel:+18296101505">+1 (829) 610-1505</a></li>
+          <li><strong>Web:</strong> <a href="https://intrepidux.com" target="_blank" rel="noopener">intrepidux.com</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; Intrepidux S.R.L. — Soluciones ERP
+    </div>
+  </footer>
+
 </body>
-
-
-
 </html>
-  
