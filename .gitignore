@@ -1,0 +1,25 @@
+# Comparación visual (regenerar con scripts/capture_blocks.py)
+assets/review/
+
+# Legacy / no usados en index.html (clientes = clientes-iconos.png)
+assets/referencias/
+assets/img/clientes-banner.png
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets / local env
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# One-off scrapes de Vercel (opcional; no necesarios para GitHub Pages)
+scripts/extract_*.py
+scripts/grep_*.py
