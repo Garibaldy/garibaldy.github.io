@@ -39,6 +39,14 @@ body.ix-body a:not(.ix-btn):hover {
   color: var(--orange);
 }
 
+body.ix-body .ix-footer a:not(.ix-btn):hover {
+  color: #bfe8ff;
+}
+
+body.ix-body .ix-footer .ix-footer-bottom a:hover {
+  color: #dfe4ef;
+}
+
 body.ix-body a.ix-btn {
   text-decoration: none;
 }
@@ -116,17 +124,20 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
 }
 
 .ix-nav .navbar-brand {
-  width: 142px;
+  width: auto;
+  max-width: 148px;
   flex-shrink: 0;
+  line-height: 0;
+  padding: 2px 0;
 }
 
 .ix-nav .navbar-brand img {
   display: block;
   width: 138px;
-  height: 54px;
-  max-height: none;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  max-height: 56px;
+  object-fit: contain;
+  object-position: left center;
   mix-blend-mode: multiply;
 }
 
@@ -1095,19 +1106,192 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   }
 }
 
-/* Footer */
+/* Footer (Vercel .footer) */
 .ix-footer {
-  background: var(--footer-bg);
   color: #fff;
+  background: var(--footer-bg);
   padding: 70px 8vw 25px;
 }
 
-.ix-footer a {
-  color: rgba(255, 255, 255, 0.75);
+.ix-footer-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10%;
+  padding-bottom: 100px;
 }
 
-.ix-footer a:hover {
+.ix-footer-brand-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ix-footer-brand {
+  align-self: start;
   color: #fff;
+}
+
+.ix-footer-brand img {
+  display: block;
+  width: 190px;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+.ix-footer-brand-block > p {
+  color: #fff;
+  max-width: 230px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.ix-footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.ix-footer-links div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.ix-footer-links small {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+  font-size: 9px;
+}
+
+.ix-footer-links a,
+.ix-footer-contact,
+.ix-footer-contact a,
+.ix-footer-bottom {
+  color: #bfe8ff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.ix-footer-links a:hover,
+.ix-footer-bottom a:hover {
+  opacity: 0.65;
+  color: #bfe8ff;
+}
+
+.ix-footer-contact h3 {
+  color: #fff;
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ix-footer-ai,
+.ix-footer-socials {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.ix-ai-badge,
+.ix-social-badge {
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  padding: 2px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.ix-ai-badge img,
+.ix-social-badge img {
+  object-fit: contain;
+  width: 27px;
+  height: 27px;
+}
+
+.ix-ai-badge:hover,
+.ix-social-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.ix-footer-addresses {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.ix-footer-addresses b {
+  color: #fff;
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+}
+
+.ix-footer-addresses address {
+  color: #dfe4ef;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.ix-footer-socials {
+  margin-top: 22px;
+}
+
+.ix-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.11);
+  color: #737982;
+  letter-spacing: 0.04em;
+  font-size: 10px;
+}
+
+.ix-footer-bottom a {
+  color: #dfe4ef;
+}
+
+.ix-footer-bottom a:hover {
+  color: #dfe4ef;
+}
+
+@media (max-width: 991.98px) {
+  .ix-footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    padding-bottom: 60px;
+  }
+
+  .ix-footer-brand-block > p {
+    grid-area: 2 / 1 / auto / -1;
+  }
+
+  .ix-footer-links {
+    grid-column: 1 / -1;
+  }
+
+  .ix-footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
 }
 
 .logo-grid img {
