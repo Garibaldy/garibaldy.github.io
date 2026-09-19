@@ -50,4 +50,5 @@ Opcional con API key: `scripts/capture_screenshotmachine.ps1` y `$env:SCREENSHOT
 ## Estado del plan
 
 - **Pasada 1** (conversión, SEO, a11y básica): aplicada.
-- **Pasadas 2–3** (marca fina vs Vercel, craft/motion): pendientes.
+- **Pasada 2** (marca/tokens/kickers): aplicada.
+- **Pasada 3** (tipografía ~65ch, hovers, `prefers-reduced-motion`, Gemini footer): aplicada.
