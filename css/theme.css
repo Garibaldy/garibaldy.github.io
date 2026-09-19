@@ -1,6 +1,33 @@
-/* Punto de entrada: marca Vercel + utilidades mínimas */
+/* Punto de entrada — Pasada 2: tokens documentados (valores en :root de intrepidux-vercel.css)
+ *
+ * --ink #163286          texto principal / marca
+ * --cream #f6f4ef        fondo página
+ * --cream-alt #f8f7f2    secciones alternas (industrias, FAQ)
+ * --orange #ff5a1f       acento / números
+ * --line #deddd8         bordes grid
+ * --ink-soft #596274     cuerpo secundario
+ * --btn-blue #11209a     CTAs
+ * --footer-bg #0c205d    pie
+ * --hero-gold #ffc956    énfasis hero
+ * --ix-radius 18px
+ * --ix-shadow-hover / --ix-transition / --ix-measure (65ch) — pasada 3
+ */
 @import url("intrepidux-vercel.css");
 
+/* Utilidades de marca (preferir sobre Bootstrap text-muted / bg-light) */
+.ix-text-muted {
+  color: var(--ink-soft) !important;
+}
+
+.ix-bg-surface {
+  background: #fff !important;
+}
+
+.ix-bg-cream-alt {
+  background: var(--cream-alt) !important;
+}
+
+/* Compat legacy */
 .btn-ix-primary,
 .btn.btn-ix-primary {
   display: inline-flex;
@@ -21,7 +48,6 @@
 }
 
 .section-dark {
-  /* Evitar tema oscuro genérico; usar .ix-cta-section o .ix-footer */
   background: var(--footer-bg);
   color: #fff;
 }

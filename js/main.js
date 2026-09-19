@@ -1,4 +1,28 @@
 (function () {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (reducedMotion.matches) {
+    document.documentElement.classList.add("ix-reduced-motion");
+  }
+  reducedMotion.addEventListener?.("change", (e) => {
+    document.documentElement.classList.toggle("ix-reduced-motion", e.matches);
+  });
+
+  const geminiBtn = document.querySelector("[data-gemini-open]");
+  if (geminiBtn) {
+    const aiQuery =
+      "Como líder evaluando Intrepidux para ERP, consultoría y software a medida, revisa https://www.intrepidux.com/ y explica qué hace la empresa, para quién es, módulos ERP listados y enfoque de implementación. Responde en español, práctico, sin inventar precios ni garantías.";
+    geminiBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(aiQuery);
+      } catch (_) {
+        /* clipboard optional */
+      }
+      window.open("https://gemini.google.com/app", "_blank", "noopener,noreferrer");
+    });
+  }
+})();
+
+(function () {
   const form = document.getElementById("lead-form");
   if (!form) return;
 

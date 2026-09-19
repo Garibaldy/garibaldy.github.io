@@ -15,8 +15,11 @@
   --footer-bg: #0c205d;
   --ix-muted-on-dark: #b8c0cc;
   --ix-radius: 18px;
+  --ix-shadow-hover: 0 14px 36px rgba(22, 24, 48, 0.09);
+  --ix-transition: 0.2s ease;
   --ix-font-display: "Montserrat", Arial, Helvetica, sans-serif;
-  --ix-font-body: Arial, Helvetica, sans-serif;
+  --ix-font-body: "Montserrat", Arial, Helvetica, sans-serif;
+  --ix-measure: 65ch;
 }
 
 html {
@@ -27,7 +30,9 @@ body.ix-body {
   background: var(--cream);
   color: var(--ink);
   font-family: var(--ix-font-body);
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 body.ix-body a:not(.ix-btn) {
@@ -342,6 +347,122 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   color: var(--ink);
 }
 
+.ix-problema-section {
+  padding-top: clamp(5rem, 12vw, 8rem);
+  background: var(--cream);
+}
+
+.ix-process-section {
+  background: #fff;
+}
+
+.ix-faq-section {
+  background: var(--cream-alt);
+}
+
+.ix-por-que-section {
+  background: #fff;
+}
+
+.ix-por-que-intro {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 10%;
+  max-width: 1120px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.ix-por-que-title {
+  color: #504e4c;
+  font-family: var(--ix-font-display);
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  margin: 0;
+}
+
+.ix-por-que-title span {
+  color: #1a168c;
+  font-weight: 700;
+}
+
+.ix-muted-copy {
+  color: var(--muted);
+  max-width: 420px;
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ix-why-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  max-width: 1200px;
+  margin: 65px auto 0;
+  background: var(--line);
+  gap: 1px;
+}
+
+.ix-why-grid article {
+  background: #fff;
+  min-height: 180px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.ix-why-grid article b {
+  display: block;
+  font-family: var(--ix-font-display);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.ix-why-grid article p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+  max-width: 22ch;
+}
+
+@media (max-width: 1199.98px) {
+  .ix-why-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .ix-por-que-intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .ix-why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ix-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ix-why-grid article p {
+    max-width: none;
+  }
+}
+
 /* —— Problema / intro —— */
 .ix-intro-grid {
   display: grid;
@@ -371,6 +492,7 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   font-size: 1rem;
   line-height: 1.55;
   margin: 0;
+  max-width: var(--ix-measure);
 }
 
 .ix-problem-grid {
@@ -442,7 +564,7 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   gap: 3rem;
   max-width: 1200px;
   margin: 42px auto 0;
-  align-items: start;
+  align-items: center;
 }
 
 .ix-connect-title {
@@ -487,6 +609,7 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   margin: 16px 0 0;
   font-size: 17px;
   line-height: 1.45;
+  max-width: 28ch;
 }
 
 /* —— Servicios —— */
@@ -519,6 +642,13 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   padding: 22px;
   display: flex;
   flex-direction: column;
+  transition: background var(--ix-transition), transform var(--ix-transition), box-shadow var(--ix-transition);
+}
+
+.ix-service-item:hover {
+  background: #fff;
+  transform: translateY(-3px);
+  box-shadow: var(--ix-shadow-hover);
 }
 
 .ix-service-icon {
@@ -553,6 +683,13 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   font-weight: 600;
   margin-top: 1rem;
   border: 0;
+  text-decoration: none;
+  transition: opacity var(--ix-transition);
+}
+
+.ix-service-item a:hover {
+  opacity: 0.75;
+  color: var(--orange);
 }
 
 .ix-service-accent {
@@ -619,6 +756,18 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   background: var(--cream-alt);
   min-height: 200px;
   padding: 24px;
+  transition: background var(--ix-transition), transform var(--ix-transition);
+}
+
+.ix-industry-card:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.ix-industry-card h3 {
+  font-family: var(--ix-font-display);
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .ix-industry-card .ix-num {
@@ -633,6 +782,12 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   min-height: 220px;
   display: flex;
   flex-direction: column;
+  transition: transform var(--ix-transition), box-shadow var(--ix-transition);
+}
+
+.ix-process-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ix-shadow-hover);
 }
 
 .ix-process-card .ix-num {
@@ -665,7 +820,7 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
 
 .ix-references-kicker span {
   display: block;
-  text-transform: capitalize;
+  text-transform: none;
   text-align: left;
   letter-spacing: -0.07em;
   font-family: var(--ix-font-display);
@@ -688,7 +843,9 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
+  max-height: min(420px, 50vw);
+  object-fit: contain;
+  padding: clamp(12px, 3vw, 28px);
 }
 
 /* —— Testimonios (experiences) —— */
@@ -747,9 +904,9 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
 
 .ix-experience-copy p {
   margin: 0;
-  max-width: 420px;
+  max-width: var(--ix-measure);
   font-size: 22px;
-  line-height: 1.22;
+  line-height: 1.28;
   letter-spacing: -0.04em;
   color: var(--ink);
 }
@@ -809,7 +966,10 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
 .ix-faq .accordion-button {
   background: transparent;
   color: var(--ink);
+  font-family: var(--ix-font-display);
   font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.35;
   box-shadow: none;
   padding: 1.25rem 0;
 }
@@ -1340,7 +1500,36 @@ button:focus-visible,
     scroll-behavior: auto;
   }
 
-  .ix-btn:hover {
+  .ix-btn:hover,
+  .ix-service-item:hover,
+  .ix-industry-card:hover,
+  .ix-process-card:hover,
+  .ix-ai-badge:hover,
+  .ix-social-badge:hover,
+  .ix-hero-play:hover {
     transform: none;
   }
+
+  .ix-service-item:hover,
+  .ix-process-card:hover {
+    box-shadow: none;
+  }
+
+  .ix-embedded-form-progress-bar > i {
+    transition: none;
+  }
+}
+
+html.ix-reduced-motion {
+  scroll-behavior: auto;
+}
+
+html.ix-reduced-motion .ix-btn:hover,
+html.ix-reduced-motion .ix-service-item:hover,
+html.ix-reduced-motion .ix-industry-card:hover,
+html.ix-reduced-motion .ix-process-card:hover,
+html.ix-reduced-motion .ix-ai-badge:hover,
+html.ix-reduced-motion .ix-social-badge:hover {
+  transform: none;
+  box-shadow: none;
 }
