@@ -23,3 +23,6 @@ desktop.ini
 # One-off scrapes de Vercel (opcional; no necesarios para GitHub Pages)
 scripts/extract_*.py
 scripts/grep_*.py
+scripts/dump_*.py
+scripts/build_*.py
+scripts/patch_*.py
