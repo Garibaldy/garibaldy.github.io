@@ -3,555 +3,496 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Intrepidux S.R.L. — Software de gestión empresarial moderno, ágil e integrado. Soluciones ERP para la transformación digital.">
-  <title>Intrepidux | Soluciones ERP</title>
+  <meta name="description" content="Intrepidux diseña e implementa sistemas empresariales, ERP, automatización e integraciones adaptados a cómo opera tu empresa en República Dominicana.">
+  <title>Intrepidux | Sistemas empresariales alrededor de tu operación</title>
+  <meta property="og:title" content="Intrepidux | Sistemas empresariales alrededor de tu operación">
+  <meta property="og:description" content="Convertimos procesos complejos en sistemas que funcionan. ERP, automatización, integraciones y desarrollo a medida.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_DO">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #F3572C;
-      --primary-dark: #c7340b;
-      --secondary: #9B0808;
-      --bg: #FFFFFF;
-      --bg-alt: #F6F6F6;
-      --footer: #383E45;
-      --text: #212529;
-      --muted: #6C757D;
-      --border: #DEE2E6;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Roboto", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--primary-dark);
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* Header */
-    header {
-      background: var(--bg);
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .header-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-phone {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .header-phone a {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .header-logo {
-      text-align: center;
-      padding: 16px 0;
-    }
-
-    .header-logo img {
-      height: 72px;
-      width: auto;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 0 16px;
-      border-top: 1px solid var(--border);
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: var(--text);
-      font-size: 0.95rem;
-      font-weight: 500;
-      padding: 8px 18px;
-      border-radius: 4px;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 28px;
-      background: var(--primary);
-      color: #fff !important;
-      border-radius: 4px;
-      font-weight: 500;
-      font-size: 1rem;
-      border: none;
-      transition: background 0.2s;
-    }
-
-    .btn:hover {
-      background: var(--primary-dark);
-      text-decoration: none;
-    }
-
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, rgba(243, 87, 44, 0.92) 0%, rgba(155, 8, 8, 0.88) 100%),
-                  url('https://www.intrepidux.com/web/image/1880-0ff00302/3d-futuristic-background-with-low-poly-plexus-design.jpg') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 90px 24px 80px;
-    }
-
-    .hero h1 {
-      font-size: clamp(1.75rem, 4.5vw, 2.75rem);
-      font-weight: 700;
-      line-height: 1.25;
-      max-width: 780px;
-      margin: 0 auto 20px;
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      font-weight: 300;
-      max-width: 640px;
-      margin: 0 auto 36px;
-      opacity: 0.95;
-      line-height: 1.7;
-    }
-
-    .hero .btn {
-      background: #fff;
-      color: var(--primary) !important;
-      font-weight: 600;
-    }
-
-    .hero .btn:hover {
-      background: var(--bg-alt);
-    }
-
-    /* Sections */
-    section {
-      padding: 72px 0;
-    }
-
-    section h2 {
-      font-size: 1.85rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 12px;
-      color: var(--text);
-    }
-
-    .section-sub {
-      text-align: center;
-      color: var(--muted);
-      max-width: 580px;
-      margin: 0 auto 48px;
-      font-size: 1.05rem;
-    }
-
-    /* Process */
-    #proceso {
-      background: var(--bg-alt);
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
-
-    .process-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 32px 24px;
-      text-align: center;
-      transition: box-shadow 0.2s;
-    }
-
-    .process-card:hover {
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-    }
-
-    .process-card .step {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--primary);
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 18px;
-    }
-
-    .process-card h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-      color: var(--primary);
-    }
-
-    .process-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    /* Services */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 20px;
-    }
-
-    .service-item {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--primary);
-      border-radius: 8px;
-      padding: 28px 16px;
-      text-align: center;
-      font-weight: 500;
-      font-size: 1rem;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .service-item:hover {
-      border-top-color: var(--secondary);
-      box-shadow: 0 4px 16px rgba(243, 87, 44, 0.12);
-    }
-
-    /* References */
-    #referencias {
-      background: var(--bg-alt);
-    }
-
-    .references-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 24px;
-      align-items: center;
-    }
-
-    .reference-item {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 20px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 120px;
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-
-    .reference-item:hover {
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      transform: translateY(-2px);
-    }
-
-    .reference-item img {
-      max-width: 100%;
-      max-height: 64px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      filter: grayscale(30%);
-      transition: filter 0.2s;
-    }
-
-    .reference-item:hover img {
-      filter: grayscale(0%);
-    }
-
-    .reference-item span {
-      margin-top: 12px;
-      font-size: 0.78rem;
-      color: var(--muted);
-      text-align: center;
-      line-height: 1.3;
-    }
-
-    /* CTA */
-    .cta {
-      background: var(--bg-alt);
-      text-align: center;
-    }
-
-    .contact-list {
-      list-style: none;
-      margin-top: 28px;
-    }
-
-    .contact-list li {
-      color: var(--muted);
-      margin-bottom: 10px;
-      font-size: 1.05rem;
-    }
-
-    .contact-list strong {
-      color: var(--text);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--footer);
-      color: rgba(255, 255, 255, 0.85);
-      padding: 40px 0 28px;
-      text-align: center;
-    }
-
-    footer img {
-      height: 56px;
-      margin-bottom: 16px;
-      filter: brightness(1.1);
-    }
-
-    footer p {
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    footer a {
-      color: var(--primary);
-    }
-
-    @media (max-width: 768px) {
-      .header-top {
-        justify-content: center;
-      }
-
-      .header-top .spacer {
-        display: none;
-      }
-
-      nav a {
-        padding: 6px 12px;
-        font-size: 0.88rem;
-      }
-
-      .hero {
-        padding: 60px 20px 56px;
-      }
-
-      section {
-        padding: 52px 0;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/theme.css" rel="stylesheet">
 </head>
-<body>
+<body class="ix-body">
+  <a class="visually-hidden-focusable position-absolute top-0 start-0 z-3 p-3 bg-white" href="#main-content">Saltar al contenido principal</a>
 
-  <header>
-    <div class="container">
-      <div class="header-top">
-        <div class="spacer" style="width:140px"></div>
-        <div class="header-phone">
-          <a href="tel:+18296101505">+1 (829) 610-1505</a>
-        </div>
-      </div>
-      <div class="header-logo">
-        <a href="/">
-          <img src="assets/logo.png" alt="Intrepidux">
+  <main id="main-content">
+    <section id="inicio" class="ix-hero">
+      <span class="ix-hero-orb ix-hero-orb-one" aria-hidden="true"></span>
+      <span class="ix-hero-orb ix-hero-orb-two" aria-hidden="true"></span>
+
+      <nav id="mainNav" class="ix-nav navbar navbar-expand-lg" aria-label="Principal">
+        <a class="navbar-brand d-flex align-items-center py-0" href="#inicio">
+          <img src="assets/logo.png" alt="Intrepidux" width="138" height="54">
         </a>
-      </div>
-      <nav>
-        <a href="#proceso">Cómo trabajamos</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#referencias">Referencias</a>
-        <a href="#contacto">Contacto</a>
-        <a href="https://www.intrepidux.com" target="_blank" rel="noopener">intrepidux.com</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navMenu" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sectores">Sectores</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
+            <li class="nav-item"><a class="nav-link" href="#clientes">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Consulta</a></li>
+          </ul>
+          <a class="ix-btn ix-btn-primary mt-3 mt-lg-0 ms-lg-3" href="#contacto">Evaluar mi operación ↗</a>
+        </div>
       </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Software de gestión empresarial moderno, ágil e integrado</h1>
-        <p>
-          Soluciones ERP que satisfacen todas las necesidades de las empresas
-          en la era de la transformación digital.
-        </p>
-        <a class="btn" href="#contacto">Contáctenos</a>
-      </div>
-    </section>
-
-    <section id="proceso">
-      <div class="container">
-        <h2>Cómo trabajamos</h2>
-        <p class="section-sub">
-          Un proceso claro desde la interacción inicial hasta el soporte continuo.
-        </p>
-        <div class="process-grid">
-          <article class="process-card">
-            <div class="step">1</div>
-            <h3>Entendiendo tus necesidades</h3>
-            <p>Interacción inicial con el cliente para comprender objetivos, procesos y retos del negocio.</p>
-          </article>
-          <article class="process-card">
-            <div class="step">2</div>
-            <h3>Elaboración de la solución</h3>
-            <p>La información recopilada se traduce en un plan de acción concreto y personalizado.</p>
-          </article>
-          <article class="process-card">
-            <div class="step">3</div>
-            <h3>Construyendo su éxito</h3>
-            <p>Desarrollo, configuración e implementación del sistema adaptado a su operación.</p>
-          </article>
-          <article class="process-card">
-            <div class="step">4</div>
-            <h3>Creciendo contigo</h3>
-            <p>Soporte y mantenimiento continuo para que el sistema evolucione con su empresa.</p>
-          </article>
+      <div class="ix-hero-content">
+        <p class="hero-badge">ERP · Automatización · Integraciones · Desarrollo a medida</p>
+        <h1>Convertimos procesos complejos <em>en sistemas que funcionan.</em></h1>
+        <p class="ix-hero-description">Diseñamos, implementamos e integramos soluciones empresariales adaptadas a la forma en que realmente opera tu empresa. No empezamos por el software: empezamos por entender tu operación.</p>
+        <a class="ix-btn ix-btn-primary" href="#contacto">Solicitar diagnóstico operativo</a>
+        <div class="ix-hero-laptop-wrap">
+          <img class="ix-hero-laptop" src="assets/img/hero-laptop.png" width="980" height="560" alt="Software de gestión empresarial Intrepidux en una computadora portátil">
+          <button type="button" class="ix-hero-play" aria-label="Reproducir video demostrativo"><span class="ix-hero-play-icon" aria-hidden="true">▶</span></button>
         </div>
       </div>
     </section>
 
-    <section id="servicios">
+    <section id="problema" class="ix-section-pad ix-problema-section" style="padding-top: 5rem;">
       <div class="container">
-        <h2>Nuestros servicios</h2>
-        <p class="section-sub">
-          Módulos integrados que cubren las áreas clave de su gestión empresarial.
-        </p>
-        <div class="services-grid">
-          <div class="service-item">Contabilidad</div>
-          <div class="service-item">Ventas</div>
-          <div class="service-item">Inventario</div>
-          <div class="service-item">Recursos Humanos</div>
-          <div class="service-item">Página web</div>
+        <p class="ix-eyebrow ix-eyebrow-muted">01</p>
+        <div class="ix-intro-grid">
+          <h2 class="ix-problema-title">Tu empresa ya tiene un sistema.<br><span>Probablemente está repartido en demasiados lugares.</span></h2>
+          <p class="ix-large-copy">Una parte está en Excel. Otra, en WhatsApp, correos y programas que no se comunican. Y otra depende de lo que una persona recuerda. Cuando la empresa crece, coordinar todo cuesta más.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="referencias">
-      <div class="container">
-        <h2>Nuestras Referencias</h2>
-        <p class="section-sub">
-          Empresas que confían en nuestras soluciones de gestión empresarial.
-        </p>
-        <div class="references-grid">
-          <div class="reference-item">
-            <img src="assets/referencias/gccontreras.png" alt="GC Contreras">
-            <span>GC Contreras</span>
+        <div class="ix-problem-grid">
+          <article class="ix-problem-card">
+            <span class="ix-num">01</span>
+            <h3>Información dispersa</h3>
+            <p>Conectamos los datos que hoy están repartidos entre archivos, mensajes y sistemas.</p>
+          </article>
+          <article class="ix-problem-card">
+            <span class="ix-num">02</span>
+            <h3>Procesos distintos en cada área</h3>
+            <p>Diseñamos un flujo compartido y automatizamos las tareas que se repiten.</p>
+          </article>
+          <article class="ix-problem-card">
+            <span class="ix-num">03</span>
+            <h3>Herramientas desconectadas</h3>
+            <p>Integramos los sistemas existentes para reducir la doble digitación y los errores.</p>
+          </article>
+          <article class="ix-problem-card">
+            <span class="ix-num">04</span>
+            <h3>Software que no se adapta</h3>
+            <p>Configuramos o desarrollamos las funciones que tu operación necesita.</p>
+          </article>
+        </div>
+        <div class="ix-connect-grid">
+          <div>
+            <h3 class="ix-connect-title">Intrepidux conecta esas piezas.</h3>
+            <p class="ix-large-copy mb-0">Analizamos tu operación, diseñamos el flujo, implementamos la solución e integramos las herramientas que ya utilizas.</p>
+            <p class="ix-connect-note">Diseñamos el flujo, conectamos las herramientas y automatizamos el trabajo manual innecesario.</p>
           </div>
-          <div class="reference-item">
-            <img src="assets/referencias/laborpay.jfif" alt="LaborPay">
-            <span>LaborPay</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/peoplegroup.png" alt="People Group Dominicana">
-            <span>People Group Dominicana</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/teamworkspace.png" alt="Team Work Space">
-            <span>Team Work Space</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/capitalcenter.png" alt="Capital Center">
-            <span>Capital Center</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/sso.png" alt="Seguridad y Salud Ocupacional">
-            <span>Seguridad y Salud Ocupacional</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/handyman.png" alt="HandyMan">
-            <span>HandyMan</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/dmm.png" alt="DMM">
-            <span>DMM</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/afropoderosas.png" alt="Afro Poderosas">
-            <span>Afro Poderosas</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/bmcargo.png" alt="BMCargo">
-            <span>BMCargo</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/espaillat.png" alt="Espaillat Comercial">
-            <span>Espaillat Comercial</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/jimsports.png" alt="Jim Sports">
-            <span>Jim Sports</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/glowicom.png" alt="GLOWICOM">
-            <span>GLOWICOM</span>
-          </div>
-          <div class="reference-item">
-            <img src="assets/referencias/webpos.png" alt="WebPOS">
-            <span>WebPOS</span>
+          <div class="ix-flow-example">
+            <div>
+              <small>Antes</small>
+              <p>Excel → WhatsApp → correo → aprobación → sistema → Excel → contabilidad</p>
+            </div>
+            <div>
+              <small>Después</small>
+              <p>Solicitud → aprobación → ejecución → facturación → contabilidad → indicadores</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="cta">
+    <section id="servicios" class="ix-services-wrap ix-section-pad">
+      <div class="container px-0 px-lg-3">
+        <p class="ix-eyebrow ix-eyebrow-muted mb-2">02 / SERVICIOS</p>
+        <h2 class="ix-services-heading">Nuestros Servicios</h2>
+        <div class="ix-services-grid">
+          <article class="ix-service-item">
+            <span class="ix-service-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><path d="M16 10v12M10 16h12"/></svg></span>
+            <h3>Sistemas empresariales</h3>
+            <p>ERP, contabilidad, ventas y CRM, compras, inventario, nómina, proyectos, comisiones, punto de venta, producción y facturación electrónica para República Dominicana.</p>
+            <a href="#contacto">Solicitar evaluación inicial ↗</a>
+          </article>
+          <article class="ix-service-item">
+            <span class="ix-service-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="8" width="6" height="6"/><rect x="18" y="8" width="6" height="6"/><rect x="8" y="18" width="6" height="6"/><rect x="18" y="18" width="6" height="6"/></svg></span>
+            <h3>Automatización</h3>
+            <p>Reducimos tareas repetitivas: aprobaciones, documentos, notificaciones, seguimiento y tareas administrativas. Usamos IA cuando aporta valor.</p>
+            <a href="#contacto">Solicitar evaluación inicial ↗</a>
+          </article>
+          <article class="ix-service-item">
+            <span class="ix-service-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14h8M12 18h8M10 10h12v14H10z"/></svg></span>
+            <h3>Integraciones</h3>
+            <p>Conectamos APIs, sistemas existentes, bancos, facturación electrónica, WhatsApp, ecommerce, transportistas y plataformas externas.</p>
+            <a href="#contacto">Solicitar evaluación inicial ↗</a>
+          </article>
+          <article class="ix-service-item">
+            <span class="ix-service-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 12v-4h8v4M12 20v4h8v-4M10 12h12v8H10z"/></svg></span>
+            <h3>Desarrollo a medida</h3>
+            <p>Construimos portales, módulos, interfaces, aplicaciones y procesos particulares que el software estándar no resuelve.</p>
+            <a href="#contacto">Solicitar evaluación inicial ↗</a>
+          </article>
+          <article class="ix-service-item">
+            <span class="ix-service-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 8h12v18H10z"/><path d="M13 12h6M13 16h6M13 20h4"/></svg></span>
+            <h3>Datos y operación</h3>
+            <p>Organizamos migraciones, reportes, tableros, indicadores, trazabilidad y procesamiento documental para decidir con mejores datos.</p>
+            <a href="#contacto">Solicitar evaluación inicial ↗</a>
+          </article>
+          <div class="ix-service-accent" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" class="ix-section-pad">
       <div class="container">
-        <h2>Contáctenos</h2>
-        <p class="section-sub">
-          Cuéntenos sobre su proyecto y le ayudamos a encontrar la solución adecuada.
-        </p>
-        <a class="btn" href="https://www.intrepidux.com/contactus" target="_blank" rel="noopener">Solicitar información</a>
-        <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:proyecto@intrepidux.com">proyecto@intrepidux.com</a></li>
-          <li><strong>Teléfono:</strong> <a href="tel:+18296101505">+1 (829) 610-1505</a></li>
-          <li><strong>Web:</strong> <a href="https://www.intrepidux.com" target="_blank" rel="noopener">www.intrepidux.com</a></li>
-        </ul>
+        <h2 class="ix-display-title ix-display-title-ink mb-2">Primero entendemos tu operación.<br>Después diseñamos el sistema.</h2>
+        <p class="text-muted col-lg-8 mb-5">Combinamos arquitectura de software y conocimiento de procesos para construir una solución que tenga sentido para tu empresa y pueda evolucionar contigo.</p>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-3">
+            <div class="ix-process-card ix-process-coral">
+              <p class="ix-num mb-2">01</p>
+              <h3 class="h5">Diagnóstico</h3>
+              <p class="small mb-0 opacity-90">Revisamos cómo trabaja tu empresa, dónde se pierde tiempo y qué necesita mejorar.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ix-process-card ix-process-gold">
+              <p class="ix-num mb-2">02</p>
+              <h3 class="h5">Diseño</h3>
+              <p class="small mb-0">Definimos los procesos, las herramientas y las conexiones que necesita la solución.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ix-process-card ix-process-sky">
+              <p class="ix-num mb-2">03</p>
+              <h3 class="h5">Implementación</h3>
+              <p class="small mb-0 opacity-90">Configuramos, desarrollamos e integramos el sistema. Lo probamos con tu equipo y acompañamos su puesta en marcha.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ix-process-card ix-process-ink">
+              <p class="ix-num mb-2">04</p>
+              <h3 class="h5">Evolución</h3>
+              <p class="small mb-0 opacity-90">Medimos los resultados y ajustamos la solución a medida que cambia tu operación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sectores" class="ix-industry-section ix-section-pad">
+      <div class="container px-0 px-lg-3">
+        <p class="ix-eyebrow ix-eyebrow-muted mb-2">04 / Sectores</p>
+        <h2 class="ix-display-title ix-display-title-ink mb-4">Industrias</h2>
+        <div class="ix-industry-grid">
+          <article class="ix-industry-card">
+            <p class="ix-num mb-2">01</p>
+            <h3 class="h5">Comercio y distribución</h3>
+            <p class="text-muted small mb-0">Desde compras e inventario hasta ventas, facturación y coordinación de entregas.</p>
+          </article>
+          <article class="ix-industry-card">
+            <p class="ix-num mb-2">02</p>
+            <h3 class="h5">Servicios profesionales</h3>
+            <p class="text-muted small mb-0">Desde planificación de proyectos y horas hasta facturación y control de rentabilidad.</p>
+          </article>
+          <article class="ix-industry-card">
+            <p class="ix-num mb-2">03</p>
+            <h3 class="h5">Logística y transporte</h3>
+            <p class="text-muted small mb-0">Desde almacenes y seguimiento hasta portales de clientes e integración de sistemas.</p>
+          </article>
+          <article class="ix-industry-card">
+            <p class="ix-num mb-2">04</p>
+            <h3 class="h5">Manufactura</h3>
+            <p class="text-muted small mb-0">Desde materiales y producción hasta costos, inventario y trazabilidad.</p>
+          </article>
+          <article class="ix-industry-card">
+            <p class="ix-num mb-2">05</p>
+            <h3 class="h5">Farmacéutica</h3>
+            <p class="text-muted small mb-0">Desde compras y lotes hasta vencimientos, inventario y trazabilidad.</p>
+          </article>
+        </div>
+        <div class="mt-5 p-4 ix-problem-card">
+          <h3 class="h5 fw-semibold">¿Trabajas en otro sector?</h3>
+          <p class="text-muted mb-3">Diseñamos la solución según los procesos de tu empresa.</p>
+          <a class="ix-btn ix-btn-primary" href="#contacto">Cuéntanos qué necesitas ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="clientes" class="ix-references-blue ix-section-pad">
+      <div class="ix-references-kicker"><span>Ellos Confiaron</span></div>
+      <div class="ix-references-image-wrap">
+        <img src="assets/img/clientes-iconos.png" width="1200" height="600" alt="Logos de empresas que confían en Intrepidux">
+      </div>
+    </section>
+
+    <section id="testimonios" class="ix-experiences ix-section-pad">
+      <div class="ix-experiences-heading">
+        <div>
+          <span class="ix-experiences-eyebrow" aria-hidden="true"></span>
+          <h2>Testimonios</h2>
+        </div>
+      </div>
+      <div class="ix-experience-panels">
+        <article class="ix-experience-panel ix-experience-peach">
+          <div class="ix-experience-copy">
+            <p>“Intrepidux combina un diseño cuidado con soluciones prácticas de facturación electrónica. Es el equipo al que acudimos cuando surge una urgencia técnica compleja y necesitamos una respuesta ágil.”</p>
+          </div>
+          <div class="ix-experience-visual ix-visual-flow" aria-hidden="true"></div>
+        </article>
+        <article class="ix-experience-panel ix-experience-periwinkle">
+          <div class="ix-experience-copy">
+            <p>“Necesitábamos apoyo técnico para implementar integraciones y dar seguimiento a los proyectos, manteniendo una comunicación clara con nuestros clientes.”</p>
+          </div>
+          <div class="ix-experience-visual ix-visual-panels" aria-hidden="true"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="por-que" class="ix-section-pad">
+      <div class="container">
+        <p class="ix-eyebrow ix-eyebrow-muted mb-2">06 / Por qué Intrepidux</p>
+        <h2 class="ix-display-title ix-display-title-ink mb-3">Software bien diseñado.<br>Una operación más clara.</h2>
+        <p class="text-muted col-lg-8 mb-5">Diseñamos sistemas empresariales alrededor de cómo funciona tu negocio. Definimos indicadores desde el inicio para medir tiempos, errores y trabajo manual.</p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4"><strong>Procesos primero</strong><p class="text-muted small mb-0">Entendemos el trabajo antes de elegir la herramienta.</p></div>
+          <div class="col-md-6 col-lg-4"><strong>Arquitectura modular</strong><p class="text-muted small mb-0">Organizamos la solución para que pueda crecer y cambiar.</p></div>
+          <div class="col-md-6 col-lg-4"><strong>Integración</strong><p class="text-muted small mb-0">Conectamos las herramientas que necesitas conservar.</p></div>
+          <div class="col-md-6 col-lg-4"><strong>Desarrollo propio</strong><p class="text-muted small mb-0">Construimos las funciones que tu operación requiere.</p></div>
+          <div class="col-md-6 col-lg-4"><strong>Resultados medibles</strong><p class="text-muted small mb-0">Definimos indicadores para evaluar las mejoras.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="ix-section-pad bg-light">
+      <div class="container">
+        <h2 class="ix-display-title ix-display-title-ink mb-4">Preguntas frecuentes</h2>
+        <div class="accordion ix-faq" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-h1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c1" aria-expanded="false" aria-controls="faq-c1">¿Por qué elegir a Intrepidux para una operación compleja?</button>
+            </h2>
+            <div id="faq-c1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq-h1">
+              <div class="accordion-body">Porque empezamos por entender cómo trabaja tu empresa. Combinamos criterio funcional, desarrollo e integración para diseñar una solución que responda al proceso real, no una plantilla que tu equipo tenga que forzar.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-h2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c2" aria-expanded="false" aria-controls="faq-c2">¿Pueden trabajar con los sistemas que ya tenemos?</button>
+            </h2>
+            <div id="faq-c2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq-h2">
+              <div class="accordion-body">Sí. Revisamos tu ERP, CRM, contabilidad y demás herramientas antes de recomendar cambios. Definimos qué conservar, qué conectar mediante API o ETL y qué conviene desarrollar para evitar reemplazos innecesarios.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-h3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c3" aria-expanded="false" aria-controls="faq-c3">¿Cómo saben qué necesita realmente nuestro negocio?</button>
+            </h2>
+            <div id="faq-c3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq-h3">
+              <div class="accordion-body">Hablamos con las personas que ejecutan el trabajo, seguimos los pasos de la operación e identificamos duplicidades, aprobaciones y puntos de espera. Así las decisiones técnicas parten de evidencia del proceso.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-h4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c4" aria-expanded="false" aria-controls="faq-c4">¿Qué diferencia hay entre una integración y un desarrollo a medida?</button>
+            </h2>
+            <div id="faq-c4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq-h4">
+              <div class="accordion-body">Una integración conecta sistemas y mantiene los datos coordinados. Un desarrollo a medida crea la pantalla, regla o flujo que tus herramientas actuales no resuelven. Evaluamos ambas opciones y usamos la más simple que cubra la necesidad.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-h5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c5" aria-expanded="false" aria-controls="faq-c5">¿Cómo controlan los riesgos antes de implementar?</button>
+            </h2>
+            <div id="faq-c5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq-h5">
+              <div class="accordion-body">Acordamos alcance, prioridades y criterios de validación antes de construir. Probamos los flujos con situaciones reales, revisamos excepciones y hacemos visibles las dependencias para que decidas con información clara.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-h6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c6" aria-expanded="false" aria-controls="faq-c6">¿Pueden conectar facturación, inventario, ventas y contabilidad?</button>
+            </h2>
+            <div id="faq-c6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq-h6">
+              <div class="accordion-body">Podemos diseñar esa conexión cuando el alcance y los sistemas lo permiten. Primero revisamos los datos, las reglas fiscales y los responsables de cada paso; luego definimos el flujo que reduce la reentrada manual.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-h7">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c7" aria-expanded="false" aria-controls="faq-c7">¿Cómo evitamos pagar por funciones que no necesitamos?</button>
+            </h2>
+            <div id="faq-c7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq-h7">
+              <div class="accordion-body">Priorizamos lo que resuelve un problema concreto de tu operación. Separamos lo esencial de lo complementario y documentamos qué queda fuera, para que la inversión siga una lógica de negocio.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-h8">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c8" aria-expanded="false" aria-controls="faq-c8">¿Qué recibimos además del software?</button>
+            </h2>
+            <div id="faq-c8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq-h8">
+              <div class="accordion-body">Recibes una solución explicada, probada y preparada para el uso del equipo. Acompañamos la puesta en marcha, documentamos los flujos principales y dejamos una forma clara de reportar incidencias o ajustes.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-h9">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c9" aria-expanded="false" aria-controls="faq-c9">¿Qué pasa si necesitamos crecer o cambiar el proceso después?</button>
+            </h2>
+            <div id="faq-c9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq-h9">
+              <div class="accordion-body">Diseñamos con una estructura modular cuando el caso lo requiere. Revisamos nuevas necesidades con el contexto de la implementación para ampliar sin reconstruir innecesariamente ni perder control sobre los datos.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-h10">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c10" aria-expanded="false" aria-controls="faq-c10">¿Cómo sabemos si Intrepidux es el proveedor adecuado?</button>
+            </h2>
+            <div id="faq-c10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" aria-labelledby="faq-h10">
+              <div class="accordion-body">En la consulta revisamos tu situación con franqueza y definimos si podemos aportar valor. Si el alcance no está claro, proponemos una evaluación inicial; si no somos el equipo adecuado, lo decimos antes de comprometer una implementación.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="ix-contact-section ix-section-pad">
+      <div class="ix-contact-grid">
+        <div class="ix-contact-copy">
+          <div class="ix-section-kicker"><span>07 / Contacto</span></div>
+          <h2>Cuéntanos qué está frenando tu operación.</h2>
+          <p>Explícanos cómo trabajan hoy y qué necesitan resolver. Revisaremos contigo por dónde empezar.</p>
+        </div>
+        <div class="ix-contact-form-card">
+          <form id="lead-form" class="ix-embedded-form" novalidate>
+            <header class="ix-embedded-form-header">
+              <div>
+                <span class="ix-embedded-form-kicker">Evaluación inicial</span>
+                <h3 tabindex="-1" data-contact-step-title>Identificación</h3>
+              </div>
+              <span class="ix-embedded-form-progress" data-contact-pct>25%</span>
+            </header>
+            <div class="ix-embedded-form-progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Progreso del formulario">
+              <i data-progress style="width: 25%"></i>
+            </div>
+            <div class="ix-embedded-form-body">
+              <div id="lead-step-1">
+                <fieldset>
+                  <legend>¿Cómo podemos llamarte?</legend>
+                  <label>
+                    Nombre y apellido
+                    <input type="text" id="lead-name" name="nombre" required autocomplete="name" aria-describedby="lead-name-error">
+                  </label>
+                  <div id="lead-name-error" class="ix-embedded-form-error" role="alert"></div>
+                  <label>
+                    Correo de trabajo
+                    <input type="email" id="lead-email" name="email" required autocomplete="email" aria-describedby="lead-email-error">
+                  </label>
+                  <div id="lead-email-error" class="ix-embedded-form-error" role="alert"></div>
+                </fieldset>
+              </div>
+              <div id="lead-step-2" class="d-none">
+                <fieldset>
+                  <legend>Tu operación</legend>
+                  <label>
+                    Empresa
+                    <input type="text" id="lead-company" name="empresa" required autocomplete="organization">
+                  </label>
+                  <label>
+                    Teléfono o WhatsApp
+                    <input type="tel" id="lead-phone" name="telefono" autocomplete="tel">
+                  </label>
+                  <label>
+                    Sector
+                    <select id="lead-sector" name="sector" required>
+                      <option value="" disabled selected>Selecciona tu sector</option>
+                      <option>Manufactura</option>
+                      <option>Distribución</option>
+                      <option>Tecnología &amp; IT</option>
+                      <option>Salud</option>
+                      <option>Construcción</option>
+                      <option>Logística y transporte</option>
+                      <option>Farmacéutica</option>
+                      <option>Energía</option>
+                      <option>Telecomunicaciones</option>
+                      <option>Otra industria</option>
+                    </select>
+                  </label>
+                  <label>
+                    Personas trabajando
+                    <select id="lead-size" name="personas" required>
+                      <option value="" disabled selected>Selecciona una opción</option>
+                      <option>1 a 15</option>
+                      <option>16 a 50</option>
+                      <option>Más de 50</option>
+                    </select>
+                  </label>
+                </fieldset>
+                <fieldset class="ix-embedded-field-full">
+                  <legend>¿Dónde llevan su información hoy?</legend>
+                  <label class="ix-embedded-check">
+                    <input type="checkbox" name="info" value="Hojas de cálculo (Excel / Drive)" id="info-excel">
+                    Hojas de cálculo (Excel / Drive)
+                  </label>
+                  <label class="ix-embedded-check">
+                    <input type="checkbox" name="info" value="Un sistema contable básico" id="info-contable">
+                    Un sistema contable básico
+                  </label>
+                  <label class="ix-embedded-check">
+                    <input type="checkbox" name="info" value="Varios programas separados" id="info-varios">
+                    Varios programas separados
+                  </label>
+                  <label class="ix-embedded-check">
+                    <input type="checkbox" name="info" value="Sistema propio viejo" id="info-propio">
+                    Sistema propio viejo
+                  </label>
+                </fieldset>
+                <label class="ix-embedded-field-full">
+                  ¿Cuál es el problema principal que quieren resolver hoy?
+                  <textarea id="lead-problem" name="problema" rows="4" required placeholder="Ej: El inventario nunca cuadra, tardamos días en facturar, o no sabemos cuánto rinde cada obra..."></textarea>
+                </label>
+                <span class="ix-form-note">Respuesta en menos de 24 horas. Cero spam.</span>
+              </div>
+            </div>
+            <footer class="ix-embedded-form-footer">
+              <button type="button" class="ix-embedded-back d-none" data-form-back>Volver</button>
+              <span aria-hidden="true"></span>
+              <button type="button" class="ix-btn ix-btn-primary" data-form-next>Continuar</button>
+              <button type="submit" class="ix-btn ix-btn-primary d-none" data-form-submit>Pedir diagnóstico gratuito <span aria-hidden="true">↗</span></button>
+            </footer>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="ix-footer">
     <div class="container">
-      <img src="assets/logo.png" alt="Intrepidux">
-      <p>&copy; Intrepidux S.R.L. — Soluciones ERP</p>
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <p class="fw-semibold mb-2">Intrepidux</p>
+          <p class="text-secondary small">Implementamos ERP y desarrollamos software a medida. Consultoría y automatización para optimizar tu operación.</p>
+        </div>
+        <div class="col-lg-2">
+          <p class="small fw-semibold text-white">Explorar</p>
+          <ul class="list-unstyled small">
+            <li><a class="link-secondary" href="#servicios">Servicios</a></li>
+            <li><a class="link-secondary" href="#proceso">Proceso</a></li>
+            <li><a class="link-secondary" href="#sectores">Industrias</a></li>
+            <li><a class="link-secondary" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <p class="small fw-semibold text-white">Contacto</p>
+          <p class="small text-secondary mb-2"><a class="link-secondary" href="mailto:proyecto@intrepidux.com">proyecto@intrepidux.com</a><br><a class="link-secondary" href="tel:+18296101505">+1 (829) 610-1505</a></p>
+          <p class="small text-secondary mb-0">RD: Calle 19 Este #20, San Gerónimo, Santo Domingo 10107<br>USA: 241 37th St, Brooklyn, NY 11232</p>
+        </div>
+        <div class="col-lg-2">
+          <p class="small text-secondary mb-0">&copy; Intrepidux 2026</p>
+          <p class="small text-secondary"><a class="link-secondary" href="#">Privacidad</a> · <a class="link-secondary" href="#">Términos</a></p>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
