@@ -1244,6 +1244,33 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   display: none;
 }
 
+.ix-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ix-form-success {
+  padding: 8px 0 16px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.ix-form-success-title {
+  font-family: var(--ix-font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
 .ix-embedded-form .ix-form-note {
   display: block;
   color: #596274;

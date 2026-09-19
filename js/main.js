@@ -23,6 +23,8 @@
 })();
 
 (function () {
+  const ODOO_LEAD_URL = "https://www.intrepidux.com/itx/lead";
+
   const form = document.getElementById("lead-form");
   if (!form) return;
 
@@ -34,6 +36,12 @@
   const nextBtn = document.querySelector("[data-form-next]");
   const backBtn = document.querySelector("[data-form-back]");
   const submitBtn = document.querySelector("[data-form-submit]");
+  const submitFeedback = document.getElementById("lead-submit-feedback");
+  const successPanel = document.getElementById("lead-success");
+  const honeypot = document.getElementById("lead-honeypot");
+  const formFooter = form.querySelector(".ix-embedded-form-footer");
+
+  const submitDefaultHtml = submitBtn?.innerHTML ?? "";
 
   function setFormProgress(percent, title) {
     if (progress) {
@@ -89,6 +97,68 @@
     return ok;
   }
 
+  function validateStep2() {
+    const required = step2?.querySelectorAll("[required]") || [];
+    let ok = true;
+    required.forEach((el) => {
+      clearFieldState(el);
+      if (!el.value.trim()) {
+        el.setAttribute("aria-invalid", "true");
+        el.classList.add("is-invalid");
+        ok = false;
+      }
+    });
+    return ok;
+  }
+
+  function buildLeadPayload() {
+    const data = new FormData(form);
+    const telefono = (data.get("telefono") || "").toString().trim();
+    return {
+      nombre: (data.get("nombre") || "").toString().trim(),
+      email: (data.get("email") || "").toString().trim(),
+      empresa: (data.get("empresa") || "").toString().trim(),
+      telefono,
+      sector: (data.get("sector") || "").toString().trim(),
+      personas: (data.get("personas") || "").toString().trim(),
+      info: data.getAll("info").map((v) => v.toString()),
+      problema: (data.get("problema") || "").toString().trim(),
+      website: "garibaldy.github.io",
+      _honeypot: (data.get("_honeypot") || "").toString(),
+    };
+  }
+
+  function setSubmitting(active) {
+    if (!submitBtn) return;
+    submitBtn.disabled = active;
+    if (active) {
+      submitBtn.textContent = "Enviando…";
+    } else {
+      submitBtn.innerHTML = submitDefaultHtml;
+    }
+  }
+
+  function showSuccess() {
+    step1?.classList.add("d-none");
+    step2?.classList.add("d-none");
+    formFooter?.classList.add("d-none");
+    successPanel?.classList.remove("d-none");
+    setFormProgress(100, "Listo");
+    if (submitFeedback) submitFeedback.textContent = "";
+  }
+
+  function fetchOptions() {
+    const opts = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(buildLeadPayload()),
+    };
+    if (typeof AbortSignal !== "undefined" && typeof AbortSignal.timeout === "function") {
+      opts.signal = AbortSignal.timeout(30000);
+    }
+    return opts;
+  }
+
   nextBtn?.addEventListener("click", () => {
     if (!validateStep1()) return;
     setStepUi(2);
@@ -100,26 +170,39 @@
     step1?.querySelector("input")?.focus();
   });
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const required = step2?.querySelectorAll("[required]") || [];
-    let ok = true;
-    required.forEach((el) => {
-      clearFieldState(el);
-      if (!el.value.trim()) {
-        el.setAttribute("aria-invalid", "true");
-        el.classList.add("is-invalid");
-        ok = false;
-      }
-    });
-    if (!ok) return;
+    if (!validateStep2()) return;
 
-    const data = new FormData(form);
-    const body = [...data.entries()]
-      .map(([k, v]) => `${k}: ${v}`)
-      .join("\n");
-    window.location.href = `mailto:proyecto@intrepidux.com?subject=${encodeURIComponent(
-      "Evaluación inicial Intrepidux"
-    )}&body=${encodeURIComponent(body)}`;
+    if (honeypot?.value.trim()) {
+      return;
+    }
+
+    if (submitFeedback) submitFeedback.textContent = "";
+    setSubmitting(true);
+
+    let succeeded = false;
+    try {
+      const res = await fetch(ODOO_LEAD_URL, fetchOptions());
+      const data = await res.json().catch(() => ({}));
+
+      if (res.status === 201 && data.ok) {
+        succeeded = true;
+        showSuccess();
+        return;
+      }
+
+      const message =
+        (typeof data.error === "string" && data.error) ||
+        "No pudimos enviar tu solicitud. Intenta de nuevo o escríbenos a proyecto@intrepidux.com.";
+      if (submitFeedback) submitFeedback.textContent = message;
+    } catch {
+      if (submitFeedback) {
+        submitFeedback.textContent =
+          "Error de conexión. Comprueba tu red e inténtalo de nuevo, o escríbenos a proyecto@intrepidux.com.";
+      }
+    } finally {
+      if (!succeeded) setSubmitting(false);
+    }
   });
 })();

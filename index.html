@@ -40,7 +40,7 @@
             <li class="nav-item"><a class="nav-link" href="#contacto">Consulta</a></li>
           </ul>
           <a class="ix-btn ix-btn-primary mt-3 mt-lg-0 ms-lg-3" href="#contacto">Evaluar mi operación ↗</a>
-        </div>
+      </div>
       </nav>
 
       <div class="ix-hero-content">
@@ -51,7 +51,7 @@
         <div class="ix-hero-laptop-wrap">
           <img class="ix-hero-laptop" src="assets/img/hero-laptop.png" width="980" height="560" alt="Software de gestión empresarial Intrepidux en una computadora portátil">
           <button type="button" class="ix-hero-play" aria-label="Reproducir video demostrativo"><span class="ix-hero-play-icon" aria-hidden="true">▶</span></button>
-        </div>
+    </div>
       </div>
     </section>
 
@@ -399,6 +399,10 @@
         </div>
         <div class="ix-contact-form-card">
           <form id="lead-form" class="ix-embedded-form" novalidate>
+            <div class="ix-honeypot" aria-hidden="true">
+              <label for="lead-honeypot">No completar</label>
+              <input type="text" name="_honeypot" id="lead-honeypot" tabindex="-1" autocomplete="off" value="">
+            </div>
             <header class="ix-embedded-form-header">
               <div>
                 <span class="ix-embedded-form-kicker">Evaluación inicial</span>
@@ -487,7 +491,12 @@
                 </label>
                 <span class="ix-form-note">Respuesta en menos de 24 horas. Cero spam.</span>
               </div>
+              <div id="lead-success" class="d-none ix-form-success" role="status">
+                <p class="ix-form-success-title">Solicitud enviada</p>
+                <p class="mb-0">Gracias. Revisaremos tu operación y te responderemos en menos de 24 horas.</p>
+              </div>
             </div>
+            <p id="lead-submit-feedback" class="ix-embedded-form-error" role="alert" aria-live="polite"></p>
             <footer class="ix-embedded-form-footer">
               <button type="button" class="ix-embedded-back d-none" data-form-back>Volver</button>
               <span aria-hidden="true"></span>
