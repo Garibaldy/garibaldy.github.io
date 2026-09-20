@@ -26,3 +26,6 @@ scripts/grep_*.py
 scripts/dump_*.py
 scripts/build_*.py
 scripts/patch_*.py
+
+# Payloads locales para probar /itx/lead (curl); no subir al repo
+scripts/_test_*.json

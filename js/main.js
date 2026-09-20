@@ -23,7 +23,7 @@
 })();
 
 (function () {
-  const ODOO_LEAD_URL = "https://www.intrepidux.com/itx/lead";
+  const ODOO_LEAD_URL = "https://erp.intrepidux.com/itx/lead";
 
   const form = document.getElementById("lead-form");
   if (!form) return;
@@ -123,7 +123,7 @@
       personas: (data.get("personas") || "").toString().trim(),
       info: data.getAll("info").map((v) => v.toString()),
       problema: (data.get("problema") || "").toString().trim(),
-      website: "garibaldy.github.io",
+      website: window.location.hostname || "www.intrepidux.com",
       _honeypot: (data.get("_honeypot") || "").toString(),
     };
   }
