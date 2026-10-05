@@ -364,6 +364,42 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   background: #fff;
 }
 
+.ix-section-figure {
+  margin: 0 0 2.25rem;
+  border-radius: var(--ix-radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.ix-section-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ix-section-figure-caption {
+  margin: 0;
+  padding: 0.65rem 1rem 0.75rem;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+  background: #faf9f6;
+}
+
+.ix-section-figure--process {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ix-section-figure--porque {
+  max-width: 72%;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 2.5rem;
+}
+
 .ix-por-que-intro {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
@@ -448,6 +484,12 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   .ix-por-que-intro {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .ix-section-figure--porque {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
