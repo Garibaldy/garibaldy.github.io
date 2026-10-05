@@ -13,6 +13,7 @@ Sitio estático de [Intrepidux](https://intrepidux.vercel.app/) (shadow copy edi
 | Colores, tipografía, look tipo Vercel | `css/intrepidux-vercel.css` (importado desde `css/theme.css`) |
 | Formulario (pasos, validación, envío) | `js/main.js` + bloque `#contacto` en `index.html` |
 | Logo, favicon, hero | `assets/logo.png`, `assets/favicon.ico`, `assets/img/hero-laptop.png` |
+| Iconos footer (AI + redes) | `assets/img/icons/*.png` |
 | Logos de clientes (franja) | `assets/img/clientes-iconos.png` y sección `#clientes` en `index.html` |
 
 ## Vista local
