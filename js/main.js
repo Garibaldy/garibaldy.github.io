@@ -188,6 +188,7 @@
 
       if (res.status === 201 && data.ok) {
         succeeded = true;
+        window.ixTrackEvent?.("generate_lead", { method: "odoo_lead_form" });
         showSuccess();
         return;
       }
