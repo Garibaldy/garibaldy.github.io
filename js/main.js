@@ -114,6 +114,16 @@
   function buildLeadPayload() {
     const data = new FormData(form);
     const telefono = (data.get("telefono") || "").toString().trim();
+    const baseProblema = (data.get("problema") || "").toString().trim();
+    const inversion = (data.get("inversion") || "").toString().trim();
+    const urgencia = (data.get("urgencia") || "").toString().trim();
+    const extra = [
+      inversion && `Inversión contemplada: ${inversion}`,
+      urgencia && `Plazo: ${urgencia}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+    const problema = extra ? `${baseProblema}\n\n---\n${extra}` : baseProblema;
     return {
       nombre: (data.get("nombre") || "").toString().trim(),
       email: (data.get("email") || "").toString().trim(),
@@ -122,7 +132,7 @@
       sector: (data.get("sector") || "").toString().trim(),
       personas: (data.get("personas") || "").toString().trim(),
       info: data.getAll("info").map((v) => v.toString()),
-      problema: (data.get("problema") || "").toString().trim(),
+      problema,
       website: window.location.hostname || "www.intrepidux.com",
       _honeypot: (data.get("_honeypot") || "").toString(),
     };
