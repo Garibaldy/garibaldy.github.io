@@ -208,6 +208,19 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   line-height: 1.58;
 }
 
+.ix-hero-qualifier {
+  color: #fff8ee;
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+.ix-hero-qualifier strong {
+  font-weight: 600;
+}
+
 .ix-hero-laptop-wrap {
   position: relative;
   z-index: 2;
@@ -684,12 +697,183 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   font-weight: 600;
 }
 
-.ix-flow-example p {
+.ix-flow-example p,
+.ix-flow-example .ix-flow-chain {
   color: var(--ink);
   margin: 16px 0 0;
   font-size: 17px;
   line-height: 1.45;
   max-width: 28ch;
+}
+
+.ix-before-after-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+.ix-before-after-bullets li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.35rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.ix-before-after-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.ix-flow-chain {
+  font-size: 13px !important;
+  font-weight: 400;
+  color: var(--muted) !important;
+  max-width: none !important;
+}
+
+.ix-section-cta {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.ix-fit-section {
+  background: var(--cream-alt);
+}
+
+.ix-fit-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  max-width: 960px;
+}
+
+.ix-fit-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.ix-fit-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.ix-service-problem {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 0.35rem;
+  line-height: 1.35;
+}
+
+.ix-pilares-section {
+  background: #fff;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.ix-pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ix-pilar-card {
+  border: 1px solid var(--line);
+  padding: 1.5rem;
+  background: var(--cream);
+}
+
+.ix-pilar-card-accent {
+  border-color: var(--ink);
+  background: #fff;
+}
+
+.ix-pilar-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--btn-blue);
+  text-decoration: none;
+}
+
+.ix-pilar-link:hover {
+  text-decoration: underline;
+}
+
+.ix-pilares-note {
+  max-width: 520px;
+}
+
+.ix-process-risk {
+  font-weight: 600;
+  opacity: 1 !important;
+}
+
+.ix-inversion-section {
+  background: var(--cream-alt);
+}
+
+.ix-inversion-card {
+  height: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 1.25rem;
+}
+
+.ix-inversion-price {
+  font-family: var(--ix-font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0.5rem 0;
+}
+
+.ix-inversion-price span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ix-deploy-card {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 1rem 1.25rem;
+  height: 100%;
+}
+
+.ix-deploy-recommended {
+  border-color: var(--ink);
+  box-shadow: inset 3px 0 0 var(--orange);
+}
+
+.ix-casos-section {
+  background: var(--cream);
+}
+
+.ix-footer-hours {
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 0.35rem;
 }
 
 /* —— Servicios —— */
@@ -782,6 +966,11 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   .ix-connect-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .ix-fit-list,
+  .ix-pilares-grid {
+    grid-template-columns: 1fr;
   }
 
   .ix-problem-grid {
