@@ -1,0 +1,74 @@
+.ix-niche-hero {
+  padding: 6.5rem 1.25rem 2.5rem;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ix-niche-hero h1 {
+  font-family: var(--ix-font-display);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: clamp(1.75rem, 3.8vw, 2.5rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.ix-niche-section {
+  padding: 2.75rem 0;
+}
+
+.ix-niche-section--alt {
+  background: var(--cream-alt);
+}
+
+.ix-niche-hub-link {
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.ix-niche-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.ix-niche-card {
+  border: 1px solid var(--line);
+  border-radius: var(--ix-radius);
+  padding: 1.15rem;
+  background: #fff;
+}
+
+.ix-niche-social-placeholder {
+  border: 1px dashed var(--line);
+  border-radius: var(--ix-radius);
+  padding: 1.25rem;
+  background: #fff;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.ix-niche-faq details {
+  border-bottom: 1px solid var(--line);
+  padding: 0.85rem 0;
+}
+
+.ix-niche-faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink);
+  list-style: none;
+}
+
+.ix-niche-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.ix-niche-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
