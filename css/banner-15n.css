@@ -1,0 +1,49 @@
+.ix-banner-15n {
+  background: var(--footer-bg, #0c205d);
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.45;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ix-banner-15n-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.65rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.ix-banner-15n p {
+  margin: 0;
+  flex: 1 1 220px;
+}
+
+.ix-banner-15n-cta {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+.ix-banner-15n-cta:hover {
+  color: var(--hero-gold, #ffc956);
+}
+
+.ix-banner-15n-dismiss {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 1.35rem;
+  line-height: 1;
+  padding: 0.15rem 0.35rem;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.ix-banner-15n-dismiss:hover {
+  opacity: 1;
+}
