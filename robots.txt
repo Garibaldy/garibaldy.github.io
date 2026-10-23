@@ -1,0 +1,14 @@
+# www.intrepidux.com — GitHub Pages
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://www.intrepidux.com/sitemap.xml
