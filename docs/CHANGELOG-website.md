@@ -89,3 +89,21 @@ python3 -m http.server 8080
 | generate_lead | Enviar formulario home (Odoo CRM) → evento con `nicho`, `landing` |
 | JSON-LD | [Rich Results Test](https://search.google.com/test/rich-results) con URL publicada |
 | Canonical / title hub | Ver `<head>` de `/facturacion-electronica/` |
+
+---
+
+# CHANGELOG — W2 (distribuidoras)
+
+**Rama:** `web/w2-distribuidoras` (base: `web/w1-seo-hub-ecf`)  
+**PR:** (al crear)  
+**Alcance:** Página distribuidoras, índice industrias, guía plazo 15 nov, sitemap.
+
+| Archivo | Cambio |
+|---------|--------|
+| `industrias/distribuidoras-importadoras/index.html` | Nicho #2: inventario + e-CF, FAQ, JSON-LD |
+| `industrias/index.html` | Índice de sectores |
+| `facturacion-electronica/fecha-limite-15-noviembre/index.html` | Guía sobria plazo DGII |
+| `facturacion-electronica/index.html` | Enlace tarjeta distribuidoras |
+| `sitemap.xml` | URLs W2 |
+
+**Verificar:** `/industrias/distribuidoras-importadoras/`, `/facturacion-electronica/fecha-limite-15-noviembre/`, WhatsApp `[DIS]`.
