@@ -198,7 +198,16 @@
 
       if (res.status === 201 && data.ok) {
         succeeded = true;
-        window.ixTrackEvent?.("generate_lead", { method: "odoo_lead_form" });
+        const nicho =
+          document.body?.dataset?.ixNicho ||
+          (typeof window.IX_DEFAULT_NICHO === "string" ? window.IX_DEFAULT_NICHO : "otro");
+        const landing =
+          document.body?.dataset?.ixLanding || window.location.pathname || "/";
+        window.ixTrackEvent?.("generate_lead", {
+          method: "odoo_lead_form",
+          nicho,
+          landing,
+        });
         showSuccess();
         return;
       }
