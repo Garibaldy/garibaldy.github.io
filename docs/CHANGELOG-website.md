@@ -107,3 +107,18 @@ python3 -m http.server 8080
 | `sitemap.xml` | URLs W2 |
 
 **Verificar:** `/industrias/distribuidoras-importadoras/`, `/facturacion-electronica/fecha-limite-15-noviembre/`, WhatsApp `[DIS]`.
+
+---
+
+# CHANGELOG — W3 (nómina)
+
+**Rama:** `web/w3-nomina` (base: `web/w2-distribuidoras`)
+
+| Archivo | Cambio |
+|---------|--------|
+| `nomina/index.html` | Página TSS → nómina → ponchador → banco, FAQ, turnos secundarios |
+| `industrias/index.html` | Enlace nómina |
+| `facturacion-electronica/index.html` | Enlace a `/nomina/` |
+| `sitemap.xml` | `/nomina/` |
+
+**Verificar:** `/nomina/`, WhatsApp `[NOM]`, sin LaborPay ni precios.
