@@ -10,13 +10,16 @@
 - [Integraciones](https://www.intrepidux.com/integraciones/): conectar ERP, bancos, e-CF, WhatsApp, ecommerce.
 - [Privacidad](https://www.intrepidux.com/privacidad/) · [Términos](https://www.intrepidux.com/terms/)
 
-## Nichos (publicación por fases)
+## Nichos e nómina
 
-- Distribuidoras e importadoras: `/industrias/distribuidoras-importadoras/`
-- Nómina RD (ángulo TSS): `/nomina/`
-- Ferreterías: `/industrias/ferreterias/`
-- Constructoras: `/industrias/constructoras/`
-- Clínicas dentales: `/industrias/clinicas-dentales/`
+- [Hub e-CF](https://www.intrepidux.com/facturacion-electronica/)
+- [Guía plazo 15 nov](https://www.intrepidux.com/facturacion-electronica/fecha-limite-15-noviembre/)
+- [Industrias (índice)](https://www.intrepidux.com/industrias/)
+- [Distribuidoras](https://www.intrepidux.com/industrias/distribuidoras-importadoras/)
+- [Nómina TSS](https://www.intrepidux.com/nomina/)
+- [Ferreterías](https://www.intrepidux.com/industrias/ferreterias/)
+- [Constructoras](https://www.intrepidux.com/industrias/constructoras/)
+- [Clínicas dentales](https://www.intrepidux.com/industrias/clinicas-dentales/)
 
 ## Contacto
 
