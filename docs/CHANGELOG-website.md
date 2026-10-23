@@ -2,7 +2,9 @@
 
 **Rama:** `web/w1-seo-hub-ecf`  
 **Fecha:** 2026-10-23  
-**Alcance:** SEO técnico, GA4 (placeholder), hub `/facturacion-electronica/`, banner 15N toggle.
+**Alcance:** SEO técnico, GA4 (placeholder), hub `/facturacion-electronica/`, banner 15N, AEO base (`llms.txt`), docs oferta/CRM/GBP.
+
+**PR:** https://github.com/Garibaldy/garibaldy.github.io/pull/2
 
 ## Cambios por archivo
 
@@ -19,6 +21,12 @@
 | `js/analytics-cta.js` | Nuevo | Evento `whatsapp_click` con `nicho` y `landing` |
 | `js/main.js` | Actualizado | Evento `generate_lead` incluye `nicho` y `landing` |
 | `index.html` | Actualizado | Banner 15N + scripts analytics/CTA; `data-ix-nicho` en body |
+| `llms.txt` | Nuevo | AEO: mapa del sitio para asistentes |
+| `docs/oferta-ecf-a-tiempo.md` | Nuevo | Argumentario y objeciones (sin publicar precios/plazos) |
+| `docs/crm-metricas-web.md` | Nuevo | UTM, etiquetas nicho, eventos GA4, KPIs |
+| `docs/aeo-gbp-linkedin.md` | Nuevo | Notas GBP/LinkedIn/Bing (solo doc, no envíos) |
+| `css/niche-industria.css` | Nuevo | Estilos compartidos páginas de nicho |
+| `facturacion-electronica/index.html` | Actualizado | Prueba social [PENDIENTE], FAQ oferta e-CF a Tiempo |
 
 **No incluido en W1 (fuera de alcance o bloqueado):**
 
