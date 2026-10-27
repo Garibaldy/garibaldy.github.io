@@ -1,0 +1,28 @@
+.ix-footer-niche .ix-footer-top {
+  padding: 2rem 1.25rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .ix-footer-niche .ix-footer-top {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.ix-footer-niche .ix-footer-brand-block p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0.5rem 0 0;
+  max-width: 280px;
+}
+
+.ix-footer-niche .ix-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  font-size: 13px;
+}

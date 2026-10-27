@@ -166,6 +166,26 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   filter: none;
 }
 
+/* Fase B — header en hub, integraciones, industrias, nómina */
+.ix-header-site {
+  z-index: 1030;
+}
+
+.ix-header-site .ix-nav-site {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.ix-nav-site .nav-link.active {
+  color: var(--orange) !important;
+  font-weight: 600;
+}
+
 .ix-hero-content {
   position: relative;
   z-index: 2;
@@ -851,6 +871,15 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
 .ix-inversion-price span {
   font-size: 0.85rem;
   font-weight: 600;
+}
+
+.ix-inversion-qualifier {
+  font-family: var(--ix-font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0.5rem 0;
+  line-height: 1.35;
 }
 
 .ix-deploy-card {

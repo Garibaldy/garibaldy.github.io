@@ -54,16 +54,13 @@
       color: var(--ink-soft);
       font-size: 0.9rem;
     }
-    .ix-nav {
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body class="ix-body">
   <a class="visually-hidden-focusable position-absolute top-0 start-0 z-3 p-3 bg-white" href="#main-content">Saltar al contenido principal</a>
-
-  <nav id="mainNav" class="ix-nav navbar navbar-expand-lg container" aria-label="Principal">
-    <a class="navbar-brand d-flex align-items-center py-0" href="../index.html">
+  <header class="ix-header-site border-bottom bg-white sticky-top">
+  <nav id="mainNav" class="ix-nav ix-nav-site navbar navbar-expand-lg container" aria-label="Principal">
+    <a class="navbar-brand d-flex align-items-center py-0" href="../index.html#inicio">
       <img src="../assets/logo.png" alt="Intrepidux" width="138" height="77">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
@@ -71,20 +68,23 @@
     </button>
     <div id="navMenu" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-        <li class="nav-item"><a class="nav-link" href="../index.html#servicios">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link" href="../index.html#sectores">Sectores</a></li>
-        <li class="nav-item"><a class="nav-link" href="../index.html#proceso">Proceso</a></li>
-        <li class="nav-item"><a class="nav-link" href="../index.html#clientes">Clientes</a></li>
-        <li class="nav-item"><a class="nav-link" href="../index.html#contacto">Consulta</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#servicios">Soluciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="../integraciones/">Integraciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="../facturacion-electronica/">Facturación e-CF</a></li>
+        <li class="nav-item"><a class="nav-link" href="../industrias/">Industrias</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#proceso">Cómo trabajamos</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#casos">Casos</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#por-que">Nosotros</a></li>
       </ul>
       <a class="ix-btn ix-btn-primary mt-3 mt-lg-0 ms-lg-3" href="../index.html#contacto">Evaluar mi operación ↗</a>
     </div>
   </nav>
+</header>
 
-  <main id="main-content" class="terms-content">
+    <main id="main-content" class="terms-content">
     <h1>Términos y condiciones de servicio</h1>
     <div class="terms-header-meta">
-      Intrepidux S.R.L., RNC 133103117 - Versión 1.0 - Vigente desde [CONFIRMAR fecha]
+      Intrepidux S.R.L., RNC 133103117 — Versión 1.4 — Vigente desde el 27 de octubre de 2026
     </div>
 
     <section id="aceptacion">
@@ -94,62 +94,74 @@
 
     <section id="pagos">
       <h2>2. Moneda y pagos</h2>
-      <p>Los montos se expresan en USD. Si la cuenta bancaria indicada es en pesos dominicanos, el pago se hace en DOP a la tasa del día del pago. Los impuestos aplicables no están incluidos salvo que se indique. Plazo de pago de cada factura: [CONFIRMAR] días.</p>
+      <p>Los montos se expresan en USD. Si la cuenta bancaria indicada es en pesos dominicanos, el pago se hace en DOP a la tasa del día del pago. Los impuestos aplicables no están incluidos salvo que se indique; si la ley obliga a retener o trasladar impuestos, se facturan y paga el cliente según corresponda.</p>
+      <p>Las condiciones comerciales de cada encargo — montos, forma y plazos de pago — se fijan solo en la <strong>propuesta o cotización que el cliente acepte por escrito</strong> y en el contrato que la formalice. Este documento es un marco general; no publica ni sustituye esas condiciones. Quien firma por una persona jurídica declara tener facultades para obligarla.</p>
     </section>
 
     <section id="alcance">
       <h2>3. Implementación y alcance</h2>
-      <p>La implementación se cotiza como proyecto, por entregables, y es válida por base de datos y versión del sistema (una base de datos multi-compañía cuenta como una). Una actualización de versión, una base de datos nueva o una reimplementación se cotizan de nuevo. Lo que no aparezca en la cotización está fuera del alcance: se pide por escrito, se evalúa y se cotiza aparte antes de ejecutarse. La capacitación incluida es la indicada en la cotización; la capacitación adicional o de personal nuevo se cotiza aparte.</p>
+      <p>La implementación se cotiza como proyecto, por entregables, y es válida por base de datos y versión del sistema (una base de datos multi-compañía cuenta como una). Una actualización de versión, una base de datos nueva o una reimplementación se cotizan de nuevo. Lo que no aparezca en la cotización está fuera del alcance.</p>
+      <p>Los cambios de alcance, funcionalidad o plazos deben acordarse <strong>por escrito</strong> (cotización adicional, orden de cambio o anexo); hasta entonces no son obligatorios para Intrepidux. La capacitación incluida es la indicada en la cotización; la capacitación adicional, la de personal nuevo o la posterior al go-live se cotiza aparte.</p>
+    </section>
+
+    <section id="duracion">
+      <h2>4. Duración, renovación y terminación</h2>
+      <p>El plazo del servicio (suscripción, licencia, soporte o proyecto) es el indicado en la <strong>cotización o contrato de servicios</strong> firmado. Si ese documento fija un plazo mínimo o renovación automática, aplican sus condiciones (incluida, cuando proceda, indemnización por terminación anticipada del cliente antes del vencimiento).</p>
+      <p>Salvo pacto en contrario, la terminación por incumplimiento material requiere notificación escrita y, cuando corresponda, un plazo razonable para subsanar (por ejemplo, treinta (30) días). Al terminar el acuerdo, el cliente debe pagar lo devengado hasta la fecha efectiva, cesar el uso no autorizado del software y, si aplica, permitir la inactivación de usuarios y accesos.</p>
+      <p>Este documento no crea relación laboral entre Intrepidux y el cliente ni su personal.</p>
     </section>
 
     <section id="responsabilidades">
-      <h2>4. Responsabilidades del cliente</h2>
+      <h2>5. Responsabilidades del cliente</h2>
       <p>Carga y validación de datos (maestros, saldos, inventario), disponibilidad de su personal clave, acceso a servidores o ambientes y respuestas a tiempo. Los retrasos por falta de tiempo, personal o información del cliente no extienden el alcance ni generan reimplementaciones sin costo.</p>
     </section>
 
     <section id="licencia">
-      <h2>5. Licencia y soporte</h2>
-      <p>Suscripción anual por usuario activo en el sistema, sin importar cuántas aplicaciones use. Incluye el derecho de uso de los módulos de Intrepidux (incluida la localización dominicana), actualizaciones menores y soporte según el nivel de servicio. El periodo es el año calendario (1 de enero al 31 de diciembre) y se renueva cada 1 de enero; el primer año puede ser proporcional. Empieza a cobrarse a más tardar [CONFIRMAR: 150] días después de iniciada la implementación, aunque el proyecto no haya terminado. Los usuarios agregados durante el año se facturan de forma proporcional. Pago anual; a petición puede ser semestral [CONFIRMAR si se mantiene la opción]. La consultoría, los desarrollos y la carga de datos no están incluidos en la suscripción y se cotizan por separado.</p>
+      <h2>6. Licencia y soporte</h2>
+      <p>Suscripción anual por usuario activo en el sistema, sin importar cuántas aplicaciones use. Incluye el derecho de uso de los módulos de Intrepidux (incluida la localización dominicana), actualizaciones menores y soporte según el nivel de servicio acordado. El periodo de facturación y renovación se indica en la cotización o contrato (p. ej. año calendario o plazo pactado). Los usuarios agregados durante el periodo se facturan de forma proporcional. La consultoría, los desarrollos, el mantenimiento no estándar y la carga de datos no están incluidos en la suscripción base y se cotizan por separado. Un ajuste de precio en renovaciones posteriores, si aplica, se comunicará con antelación conforme al contrato o cotización.</p>
+      <p>El mantenimiento cubre corrección de errores del software no modificado dentro del alcance contratado, según políticas vigentes; no incluye nuevas versiones mayores o funciones comercializadas aparte. Soporte en sitio o fuera de horario estándar se factura según tarifas vigentes salvo pacto distinto.</p>
     </section>
 
     <section id="facturacion">
-      <h2>6. Facturación electrónica</h2>
-      <p>El servicio de facturación electrónica (conector, API e integración con el proveedor autorizado) depende de una suscripción o licencia vigente. Si la suscripción no se renueva o queda en mora, el servicio puede suspenderse con el preaviso de la sección 10. La implementación de facturación electrónica es por base de datos y versión.</p>
+      <h2>7. Facturación electrónica</h2>
+      <p>El servicio de facturación electrónica (conector, API e integración con el proveedor autorizado) depende de una suscripción o licencia vigente. Si la suscripción no se renueva o queda en mora, el servicio puede suspenderse conforme a la sección 10. La implementación de facturación electrónica es por base de datos y versión.</p>
     </section>
 
     <section id="intelectual">
-      <h2>7. Propiedad intelectual</h2>
-      <p>Los módulos, el código fuente, las adaptaciones y la documentación desarrollados por Intrepidux son propiedad de Intrepidux S.R.L. El cliente recibe un derecho de uso no exclusivo e intransferible, limitado a sus bases de datos y mientras tenga una suscripción o licencia vigente. Sin autorización escrita de Intrepidux no puede copiar, redistribuir, vender, sublicenciar, migrar a otras versiones o plataformas ni hacer obras derivadas. Tener acceso al servidor o a un repositorio no transfiere la propiedad. Los módulos de terceros (por ejemplo, de la tienda de Odoo con licencia OPL-1) se rigen por su propia licencia y su compra no está incluida salvo que la cotización lo indique.</p>
+      <h2>8. Propiedad intelectual y datos</h2>
+      <p>Los programas, reproducciones, adaptaciones, documentación, marcas y demás derechos de propiedad intelectual desarrollados o licenciados por Intrepidux permanecen de Intrepidux S.R.L. (salvo software de terceros con licencia propia). El cliente recibe un derecho de uso no exclusivo e intransferible, limitado a sus bases de datos y mientras tenga una suscripción o licencia vigente. Sin autorización escrita no puede copiar, redistribuir, vender, sublicenciar, ceder accesos a terceros no autorizados, acceder al código fuente ni hacer obras derivadas. Tener acceso al servidor o a un repositorio no transfiere la propiedad.</p>
+      <p>Los datos maestros y operativos que el cliente carga son responsabilidad del cliente. Intrepidux trata la información del cliente con confidencialidad y solo accede a datos de producción en la medida necesaria para soporte autorizado y acordado.</p>
     </section>
 
     <section id="exclusiones-soporte">
-      <h2>8. Exclusiones del soporte</h2>
+      <h2>9. Exclusiones del soporte</h2>
       <p>El soporte no cubre el código modificado por terceros, las migraciones o reinstalaciones hechas sin Intrepidux, los problemas de infraestructura del cliente ni los módulos de terceros no gestionados por Intrepidux. Las correcciones en esos casos se cotizan.</p>
     </section>
 
     <section id="mora-suspension">
-      <h2>9. Mora y suspensión</h2>
-      <p>Si una factura vence sin pagarse, Intrepidux puede suspender el soporte y los servicios ligados a la suscripción (incluida la facturación electrónica), avisando por escrito con [CONFIRMAR: 30] días de anticipación. Para reactivar hay que pagar todo lo adeudado. Recargo por mora: [CONFIRMAR o quitar].</p>
+      <h2>10. Mora y suspensión</h2>
+      <p>Los recargos por mora, plazos de pago vencidos y condiciones para reactivar un servicio suspendido se rigen por la <strong>cotización o contrato</strong> firmado y por la factura emitida.</p>
+      <p>Intrepidux puede suspender el acceso al software, soporte y servicios vinculados (incluida facturación electrónica) por falta de pago, acceso no autorizado o incumplimiento grave de estos términos, previo aviso por escrito cuando sea razonable; en casos de fraude, cesión no autorizada de accesos o riesgo inmediato para el sistema, puede actuar sin demora conforme al contrato.</p>
     </section>
 
     <section id="descuentos">
-      <h2>10. Descuentos</h2>
-      <p>Los descuentos siempre tienen una condición, como pago anual adelantado o la contratación conjunta de varios proyectos, y se aplican al total de la cotización. Si la condición no se cumple, el descuento se pierde.</p>
+      <h2>11. Descuentos</h2>
+      <p>Los descuentos, si los hubiere, y sus condiciones se indican en la cotización o contrato. Si la condición no se cumple, el descuento no aplica.</p>
     </section>
 
     <section id="garantia">
-      <h2>11. Garantía</h2>
-      <p>Los desarrollos e implementaciones tienen [CONFIRMAR: 3] meses de garantía desde su entrega, solo para corregir errores dentro del alcance cotizado. Los cambios de requerimientos no están cubiertos.</p>
+      <h2>12. Garantía</h2>
+      <p>Los desarrollos e implementaciones tienen tres (3) meses de garantía desde su entrega, solo para corregir errores dentro del alcance cotizado. Los cambios de requerimientos no están cubiertos.</p>
     </section>
 
     <section id="confidencialidad-accesos">
-      <h2>12. Confidencialidad y accesos</h2>
-      <p>Ambas partes mantienen confidencial la información que se intercambian, también después de terminar la relación. Las credenciales se comparten solo por canales seguros, y el cliente controla quien accede a su sistema.</p>
+      <h2>13. Confidencialidad y accesos</h2>
+      <p>Ambas partes mantienen confidencial la información comercial, técnica y financiera intercambiada, también después de terminar la relación, salvo obligación legal o autorización escrita. Las credenciales se comparten solo por canales seguros; el cliente controla quién accede a su sistema y no cede usuarios a terceros sin autorización de Intrepidux.</p>
     </section>
 
     <section id="responsabilidad-ley-contacto">
-      <h2>13. Responsabilidad, ley y contacto</h2>
-      <p>La responsabilidad de Intrepidux se limita a lo pagado en los últimos [CONFIRMAR] meses. No responde por lucro cesante ni por pérdida de datos causada por terceros o por el cliente. Se aplican las leyes de la República Dominicana y son competentes sus tribunales. Contacto: erp@intrepidux.com.</p>
+      <h2>14. Responsabilidad, ley y contacto</h2>
+      <p>La responsabilidad de Intrepidux se limita a lo pagado en los últimos doce (12) meses por el servicio que originó el reclamo. No responde por lucro cesante ni por pérdida de datos causada por terceros o por el cliente. Lo no previsto expresamente se interpreta conforme al derecho común dominicano. Para controversias aplican las leyes de la República Dominicana y la competencia de sus tribunales ordinarios, salvo pacto arbitral válido en un contrato específico. Contacto: erp@intrepidux.com.</p>
     </section>
 
     <p class="terms-footer-note">Intrepidux S.R.L. puede actualizar estos términos; los cambios aplican a cotizaciones y renovaciones posteriores a su publicación.</p>
@@ -200,8 +212,10 @@
     </div>
   </footer>
 
+  <script src="../js/site-config.js"></script>
   <script src="../js/analytics-config.js"></script>
   <script src="../js/analytics.js"></script>
+  <script src="../js/analytics-cta.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/main.js"></script>
 </body>
