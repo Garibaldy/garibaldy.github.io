@@ -141,7 +141,14 @@ URLs clave: `/`, `/facturacion-electronica/`, `/nomina/`, `/industrias/distribui
 - **CSS:** `.ix-inversion-qualifier` en `css/intrepidux-vercel.css`.
 - **Form contacto:** dropdown de rango de inversión del lead se mantiene (calificación, no precio de lista).
 
-## 13. Fuera de alcance
+## 13. Revisión armonía (chrome)
+
+- Header **fuera** de `<main>` en hub e integraciones.
+- **404**, **términos** y **privacidad** alineados (nav Fase B + footer home).
+- Scripts: `scripts/site-harmony-check.py`, `scripts/site-harmony-fix.py`; guía `docs/site-harmony.md`.
+- `industrias/index.html`: analytics + `main.js` como el resto de landings.
+
+## 14. Fuera de alcance
 
 - `erp.intrepidux.com`, `dental.intrepidux.com` (otros repos)  
 - Merge a `master` (David decide)  
