@@ -6,8 +6,8 @@ La plantilla de contrato bilateral (persona física / «LA PRIMERA PARTE») sirv
 
 | Tema plantilla | Términos web |
 |----------------|--------------|
-| Anticipos antes de consultoría | §2 — pago adelantado antes de iniciar trabajo |
-| 5 días para pagar factura | §2 — salvo otro plazo en cotización |
+| Calendario por concepto (implementación, hitos) | §2 — definido en cotización/contrato; acuerdo entre partes |
+| 5 días / anticipos | §2 — práctica habitual, no única forma; vencimiento en factura; 5 días solo como defecto si no hay plazo |
 | Mora 5% mensual | §10 |
 | Suspensión por impago / acceso indebido | §10 |
 | Cambios de alcance por escrito | §3 |
