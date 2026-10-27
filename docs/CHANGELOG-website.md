@@ -123,7 +123,7 @@ URLs clave: `/`, `/facturacion-electronica/`, `/nomina/`, `/industrias/distribui
 - Footer EXPLORAR: hub e-CF + industrias
 - **Fase A:** footer HTML estático `ix-footer-niche` (plantillas `partials/footer-fase-a-*.html`) en nichos, `/nomina/`, hub e-CF, guía 15N e `/integraciones/` — EXPLORAR alineado con home
 - **Fase B:** header sticky con **mismo menú que la home** (`partials/header-fase-b-*.html`) en hub e-CF, guía 15N, integraciones, `/industrias/`, `/nomina/` y las 5 landings de sector; CSS `.ix-header-site` / `.ix-nav-site`; Bootstrap bundle en páginas con toggler móvil
-- **Footer unificado:** subpáginas usan el **mismo footer que `index.html`** (`partials/footer-home-*.html`) — EXPLORAR completo, AI badges, direcciones, redes; `main.js` para Gemini. Fase A (`footer-fase-a-*`) deprecada.
+- **Footer unificado:** subpáginas usan el **mismo footer que la home** (`partials/footer-home-*.html`) — EXPLORAR completo, AI badges, direcciones, redes; `main.js` para Gemini. Fase A (`footer-fase-a-*`) deprecada. **Fuente de verdad:** `partials/footer-home-root.html` + `scripts/sync-footers-from-root.py` (regenera `index.html` y partials `1`/`2`).
 
 ## 11. UX nichos (Hormozi — solo `/industrias/*` y `/nomina/`)
 
