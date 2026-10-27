@@ -13,7 +13,7 @@ Conectar la **certificación e-CF DGII** con la **operación real** (pedido → 
 | Nombre «e-CF a Tiempo» | Mención permitida; versión por nicho [PENDIENTE] |
 | Plazo N días hábiles | No publicado |
 | Garantía (recomendación 1 + 4) | No publicado |
-| Precio (recomendación A: diagnóstico 20 min) | No publicado |
+| Precio / calculadoras (alcance e inversión; p. ej. FG vs sistema) | **No publicadas en web** — solo en proceso de venta tras diagnóstico |
 | Cupos semanales | No publicado |
 | Anuncios pagados / presupuesto | No publicado — ver `docs/crm-metricas-web.md` |
 
@@ -38,7 +38,9 @@ No hay que reemplazar todo: conectar e-CF al flujo existente. Enlace a `/integra
 
 ### «¿Cuánto cuesta? / ¿En cuántos días?»
 
-[PENDIENTE DAVID] En web: invitar a diagnóstico de 20 min y cotización cerrada en 24 h **solo cuando David apruebe el texto A**.
+**Web (vigente):** no cifras ni calculadoras públicas. Invitar a diagnóstico; cotización cerrada con calculadoras internas (FG vs sistema, usuarios, integraciones). Plazo N días sigue [PENDIENTE DAVID] hasta aprobar garantía/plazo.
+
+**Opcional futuro:** embed de calculadora en hub — solo cuando David decida publicarla.
 
 ### «¿Odoo es lo que venden?»
 

@@ -96,7 +96,7 @@ Cada nicho: enlace al hub e-CF, bloque **[PENDIENTE]** prueba social, sin Odoo e
 
 - [ ] `IX_GA_MEASUREMENT_ID` real en `js/analytics-config.js`  
 - [ ] Hero home e-CF vs operación (A/B/C)  
-- [ ] Garantía, precio e-CF, N días, cupos, ads  
+- [ ] Garantía, N días, cupos, ads (precio: calculadoras internas en ventas — **sin** publicar en web)  
 - [ ] LinkedIn URL `/company/…` (footer sigue `linkedin.com/intrepiduxerp` — **TODO**)  
 - [ ] Tope Facturador Gratuito (tabla hub)  
 - [ ] Permisos aliados FE y casos por nicho  
@@ -129,8 +129,19 @@ URLs clave: `/`, `/facturacion-electronica/`, `/nomina/`, `/industrias/distribui
 - Por página: ecuación de valor (`.ix-value-grid`), stack (`.ix-stack`), pasos post-CTA (`.ix-next-steps`), banda CTA, sticky móvil
 - Home y hub e-CF **sin** estos bloques
 
-## 12. Fuera de alcance
+## 12. Inversión / calculadoras (sin precios públicos)
+
+- **Decisión:** proceso comercial con calculadoras de alcance e inversión; **no** publicadas en web por ahora.
+- **Home** `#inversion`: quitadas cifras «Desde US$…»; tarjetas con calificadores + FAQ inversión / On-Premise alineadas.
+- **`/integraciones/`:** bloque inversión sin cifra.
+- **Hub e-CF + nichos** (ferreterías, distribuidoras, nómina): copy «diagnóstico + calculadoras internas».
+- **`docs/oferta-ecf-a-tiempo.md`:** tabla y objeción «¿Cuánto cuesta?» actualizadas.
+- **CSS:** `.ix-inversion-qualifier` en `css/intrepidux-vercel.css`.
+- **Form contacto:** dropdown de rango de inversión del lead se mantiene (calificación, no precio de lista).
+
+## 13. Fuera de alcance
 
 - `erp.intrepidux.com`, `dental.intrepidux.com` (otros repos)  
 - Merge a `master` (David decide)  
 - PR #3 obsoleto — usar solo **PR #2**
+- Calculadora pública en hub (W3) — cuando David apruebe
