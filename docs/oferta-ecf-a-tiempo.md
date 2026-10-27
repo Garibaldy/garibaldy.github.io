@@ -5,7 +5,7 @@
 ## Mensaje público (vigente)
 
 - Conectar certificación **e-CF DGII** con la operación (pedido → factura → cobro → contabilidad).
-- Migración de datos maestros incluida en el servicio e-CF acordado, no como SKU aparte.
+- Migración / carga de datos maestros: solo en cotización (no prometer inclusión en web).
 - Si el **Facturador Gratuito** basta, decirlo (tabla en hub).
 
 ## Objeciones → respuesta (FAQ / llamadas)
