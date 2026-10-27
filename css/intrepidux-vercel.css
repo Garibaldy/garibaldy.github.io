@@ -853,6 +853,15 @@ body.ix-body a.ix-btn.ix-btn-primary:hover {
   font-weight: 600;
 }
 
+.ix-inversion-qualifier {
+  font-family: var(--ix-font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0.5rem 0;
+  line-height: 1.35;
+}
+
 .ix-deploy-card {
   border: 1px solid var(--line);
   background: #fff;
