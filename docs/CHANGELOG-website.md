@@ -121,7 +121,7 @@ URLs clave: `/`, `/facturacion-electronica/`, `/nomina/`, `/industrias/distribui
 - Hero: CTA primario → integraciones; secundario contacto; línea e-CF hub
 - `#sectores`: mismas 6 rutas que `/industrias/` + medianas → integraciones
 - Footer EXPLORAR: hub e-CF + industrias
-- **Fase A:** `js/site-footer-niche.js` + `data-ix-root` en `/industrias/*` y `/nomina/` (mismo EXPLORAR que home)
+- **Fase A:** footer HTML estático `ix-footer-niche` (plantillas `partials/footer-fase-a-*.html`) en nichos, `/nomina/`, hub e-CF, guía 15N e `/integraciones/` — EXPLORAR alineado con home
 
 ## 11. UX nichos (Hormozi — solo `/industrias/*` y `/nomina/`)
 
