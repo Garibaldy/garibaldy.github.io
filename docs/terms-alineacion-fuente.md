@@ -1,0 +1,20 @@
+# Términos web vs. plantilla histórica de contrato
+
+La plantilla de contrato bilateral (persona física / «LA PRIMERA PARTE») sirve de **referencia comercial**, no se publica en web.
+
+**`/terms/`** es política general de **Intrepidux S.R.L.** (RNC 133103117). Alineaciones principales con la plantilla:
+
+| Tema plantilla | Términos web |
+|----------------|--------------|
+| Anticipos antes de consultoría | §2 — pago adelantado antes de iniciar trabajo |
+| 5 días para pagar factura | §2 — salvo otro plazo en cotización |
+| Mora 5% mensual | §10 |
+| Suspensión por impago / acceso indebido | §10 |
+| Cambios de alcance por escrito | §3 |
+| Capacitación extra de pago | §3 |
+| PI en el proveedor | §8 |
+| Confidencialidad post-contrato | §13 |
+| Plazo mínimo / penalidad por rescisión | §4 — remite a cotización/contrato firmado |
+| 2 años renovación automática | No fijado en web; va en **contrato de servicios** por cliente |
+
+Lo específico de cada cliente (duración, usuarios, penalidades, domicilios) sigue en cotización y contrato firmado; prevalece sobre la web si difieren.
