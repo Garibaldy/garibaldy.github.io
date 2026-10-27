@@ -115,7 +115,14 @@ URLs clave: `/`, `/facturacion-electronica/`, `/nomina/`, `/industrias/distribui
 
 ---
 
-## 10. UX nichos (Hormozi — solo `/industrias/*` y `/nomina/`)
+## 10. Home ↔ nichos (conexión)
+
+- Nav: Integraciones antes que e-CF; link `industrias/`
+- Hero: CTA primario → integraciones; secundario contacto; línea e-CF hub
+- `#sectores`: mismas 6 rutas que `/industrias/` + medianas → integraciones
+- Footer EXPLORAR: hub e-CF + industrias
+
+## 11. UX nichos (Hormozi — solo `/industrias/*` y `/nomina/`)
 
 - `css/offer-ux.css` importado vía `niche-industria.css`
 - Por página: ecuación de valor (`.ix-value-grid`), stack (`.ix-stack`), pasos post-CTA (`.ix-next-steps`), banda CTA, sticky móvil
