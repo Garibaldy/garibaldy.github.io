@@ -7,4 +7,4 @@
  *
  * PLACEHOLDER (no usar en producción): "G-XXXXXXXXXX"
  */
-window.IX_GA_MEASUREMENT_ID = "";
+window.IX_GA_MEASUREMENT_ID = "G-LRKBWPRWL0";
