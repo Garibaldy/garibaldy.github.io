@@ -115,7 +115,13 @@ URLs clave: `/`, `/facturacion-electronica/`, `/nomina/`, `/industrias/distribui
 
 ---
 
-## 10. Fuera de alcance
+## 10. UX nichos (Hormozi — solo `/industrias/*` y `/nomina/`)
+
+- `css/offer-ux.css` importado vía `niche-industria.css`
+- Por página: ecuación de valor (`.ix-value-grid`), stack (`.ix-stack`), pasos post-CTA (`.ix-next-steps`), banda CTA, sticky móvil
+- Home y hub e-CF **sin** estos bloques
+
+## 11. Fuera de alcance
 
 - `erp.intrepidux.com`, `dental.intrepidux.com` (otros repos)  
 - Merge a `master` (David decide)  
