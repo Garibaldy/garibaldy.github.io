@@ -99,7 +99,7 @@ Cada nicho: enlace al hub e-CF, bloque **[PENDIENTE]** prueba social, sin Odoo e
 - [ ] Logos / casos / testimonios con permiso (opcional; cajas [PENDIENTE] retiradas de web)  
 - [ ] Backlog: `/odoo/`, `/integraciones/api-nomina/`, `/blog/`, ads (doc CRM)  
 
-**Cerrado en web:** oferta «e-CF a Tiempo», bonos, cupos, placeholders comerciales; términos v1.2 (27 oct 2026): calendario de pago por concepto en cotización/contrato (implementación negociable); mora 5% sobre montos vencidos.  
+**Cerrado en web:** oferta «e-CF a Tiempo», bonos, cupos, placeholders comerciales; términos v1.3 (27 oct 2026): pagos/mora/descuentos sin detalle comercial en web (remite a cotización/contrato).  
 **No hacer:** campos ocultos UTM en form (decisión explícita).  
 
 ---
