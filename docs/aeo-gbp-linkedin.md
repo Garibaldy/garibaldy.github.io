@@ -17,7 +17,7 @@
 - NAP consistente con web: **Intrepidux S.R.L.**, Calle 19 Este #20, San Gerónimo, Santo Domingo 10107, **+1 (829) 610-1505**, **proyecto@intrepidux.com**  
 - Categorías sugeridas: consultoría de sistemas / software empresarial (validar con políticas Google)  
 - Servicios: listar **Facturación electrónica e-CF** enlazando al hub (no prometer plazos/precios)  
-- **No** publicar «migración desde Facturador Gratuito» como servicio GBP aparte (plan: paso incluido)  
+- **No** publicar migración incluida o «no se paga aparte» en web/GBP; va en cotización  
 - Reseñas: solo solicitar a clientes reales; no inventar  
 - Aliados estratégicos en GBP: [PENDIENTE permisos por aliado]  
 
