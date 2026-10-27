@@ -95,13 +95,12 @@ Cada nicho: enlace al hub e-CF, bloque **[PENDIENTE]** prueba social, sin Odoo e
 ## 8. Pendientes David (checklist)
 
 - [ ] `IX_GA_MEASUREMENT_ID` real en `js/analytics-config.js`  
-- [ ] Hero home e-CF vs operación (A/B/C)  
-- [ ] Garantía, N días, cupos, ads (precio: calculadoras internas en ventas — **sin** publicar en web)  
-- [ ] LinkedIn URL `/company/…` (footer sigue `linkedin.com/intrepiduxerp` — **TODO**)  
-- [ ] Tope Facturador Gratuito (tabla hub)  
-- [ ] Permisos aliados FE y casos por nicho  
-- [ ] Campos ocultos UTM/nicho en formulario Odoo  
-- [ ] `/odoo/`, `/integraciones/api-nomina/`, `/blog/` — fuera de este PR  
+- [ ] LinkedIn URL `/company/…` (footer: `linkedin.com/intrepiduxerp`)  
+- [ ] Logos / casos / testimonios con permiso (opcional; cajas [PENDIENTE] retiradas de web)  
+- [ ] Backlog: `/odoo/`, `/integraciones/api-nomina/`, `/blog/`, ads (doc CRM)  
+
+**Cerrado en web:** oferta «e-CF a Tiempo», bonos, cupos, placeholders comerciales; términos v1.0 (27 oct 2026) con pago por adelantado/contado.  
+**No hacer:** campos ocultos UTM en form (decisión explícita).  
 
 ---
 
